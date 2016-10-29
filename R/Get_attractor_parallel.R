@@ -37,7 +37,7 @@ Get_attractor_wrapper.f=function(cpus, #number of cores
   M<-dynamic_evolution.f(BN, time.steps,KO_nodes,Over_expr,
                          Over_expr_AA,KO_times,OE_times,asynchronous=FALSE)
   nodes.names<-BN$nodes.names
-  attr<-get.attractor_syn(M)
+  attr<-SPIDDOR::get.attractor_syn(M)
   
   if(length(attr)==length(nodes.names)){
     attr<-c(attr,time.steps)
@@ -55,7 +55,7 @@ Get_attractor_wrapper.f=function(cpus, #number of cores
                                                        Over_expr_AA,KO_times,OE_times,asynchronous), simplify=FALSE)
   #replicate function repits time_evolution.f function "repetitions" times. 
   
-  P<-lapply(pattern_i,get.attractor.asyn)
+  P<-lapply(pattern_i,SPIDDOR::get.attractor.asyn)
   
   pattern_final<-Reduce('cbind', P)
   
@@ -79,7 +79,7 @@ Get_Attractor_parallel.f=function(cpus,
   snowfall::sfInit( parallel=TRUE, cpus=cpus)
   capture.output(snowfall::sfLibrary(data.table),file='NUL')
   capture.output(snowfall::sfSource("dynamic_evolution.R"),file='NUL') #Finalmente poner dynamic_evolution.R
-  capture.output(snowfall::sfSource(paste(system.file("R",package="SPIDDOR"),"/Get_attractor.R",sep="")),file='NUL')
+
   snowfall::sfClusterSetupRNGstream(seed=runif(1,min=0,max=9.22e+18))
   
   
