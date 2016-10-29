@@ -15,7 +15,6 @@ Author: José David Gomez-Mantilla [aut], Iñaki Trocóniz [aut],  Itziar Irurzu
 Maintainer: Itziar Irurzun <itzirurzun@alumni.unav.es>
 Description: Modeling, simulation and analysis of Boolean networks applied to Systems Pharmacology. This package combines the advantages of the parameter-free nature of logical models while providing a good approximation of the qualitative behavior of biological systems.
 License: GPL (>= 2)
-LinkingTo: Rcpp
 Depends:
     reshape,
     ggplot2,
@@ -26,4 +25,5 @@ Imports: Rcpp,
     rlecuyer,
     data.table,
     gplots
+LinkingTo: Rcpp
 RoxygenNote: 5.0.1
