@@ -245,10 +245,11 @@ read.Boolean.functions.C<-function(file=NULL,Lines=NULL){
   
   }
 
-# source("read_Boolean_functions_c.R")
-# source("add_header.R")
-# source("write_dynamic_evolution_cpp.R")
-# source("write_dynamic_evolution_c.R")
+# source("R/read_Boolean_functions.R")
+# source("R/read_Boolean_functions_c.R")
+# source("R/add_header.R")
+# source("R/write_dynamic_evolution_cpp.R")
+# source("R/write_dynamic_evolution_c.R")
 # 
 # library(Rcpp)
 # file<-"Example_networks/example_network.txt"

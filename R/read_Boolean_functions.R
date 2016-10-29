@@ -1,4 +1,4 @@
-#' @importFrom Rcpp sourceCpp
+#' @importFrom Rcpp sourceCpp evalCpp
 NULL
 
 #' @export

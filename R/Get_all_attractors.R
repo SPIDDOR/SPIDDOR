@@ -1,12 +1,13 @@
 
 Get_all_attractor_wrapper.f=function(cpus,BN,time.steps,asynchronous,rep,r,combinations){
+  #Rcpp::sourceCpp(paste(getwd(),"/Boolean_func_C.cpp",sep=""))
   Attr<-list()
   o=1
   r2<-r[(1+(cpus-1)*combinations):(cpus*combinations),]
   nodes.names<-rev(BN$nodes.names)
   for(i in 1:combinations){
     BN$Initial_conditions<-nodes.names[as.logical(r2[i,])]
-    Attractor<-Get_Attractor.f(BN,time.steps=time.steps,asynchronous=asynchronous,repetitions=rep,Percent.ON=TRUE)
+    Attractor<-SPIDDOR::Get_Attractor.f(BN,time.steps=time.steps,asynchronous=asynchronous,repetitions=rep,Percent.ON=TRUE)
     
     a<-lapply(Attr,function(x)x[1:length(BN$nodes.names)]/Attractor)
     if(!is.na(all(lapply(a,function(x)which(any(x>=1.24 | x<=0.81)))==T))){
@@ -24,8 +25,7 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
   
   snowfall::sfInit( parallel=TRUE, cpus=cpus)
   capture.output(snowfall::sfSource("dynamic_evolution.R"),file='NUL')
-  capture.output(snowfall::sfSource(paste(system.file("R",package="SPIDDOR"),"/Get_attractor.R",sep="")),file='NUL')
-  
+
   snowfall::sfClusterSetupRNGstream(seed=runif(1,min=0,max=9.22e+18))
   
   BN$Polymorphism<-setNames(rep(1,length(BN$nodes.names)),BN$nodes.names)
@@ -41,7 +41,7 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
   }
 
   
-  #snowfall::sfExport("r")
+  #snowfall::sfExport("Get_Attractor.f")
   
   if(repetitions>60 & asynchronous==TRUE) repetitions=60
   
