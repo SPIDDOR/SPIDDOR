@@ -1,0 +1,28 @@
+Package: SPIDDOR
+Type: Package
+Title: Modeling, simulation and analysis of Boolean networks applied to Systems Pharmacology 
+Version: 1.0
+Date: 2016-10-23
+Authors@R: c(
+   person("José David", "Gomez-Mantilla", 
+      role = "aut", email = "jdgomez@unav.es"),
+   person("Iñaki", "Trocóniz", 
+      role = "aut", email = "itroconiz@unav.es"),
+   person("Itziar", "Irurzun-Arana", 
+      role = c("aut", "cre"), email = "itzirurzun@alumni.unav.es")
+   )
+Author: José David Gomez-Mantilla [aut], Iñaki Trocóniz [aut],  Itziar Irurzun-Arana [aut, cre]
+Maintainer: Itziar Irurzun <itzirurzun@alumni.unav.es>
+Description: Modeling, simulation and analysis of Boolean networks applied to Systems Pharmacology. This package combines the advantages of the parameter-free nature of logical models while providing a good approximation of the qualitative behavior of biological systems.
+License: GPL (>= 2)
+Depends:
+    reshape,
+    ggplot2,
+    snow,
+    R (>= 3.2.0)
+Imports: Rcpp,
+    snowfall,
+    rlecuyer,
+    data.table,
+    gplots
+RoxygenNote: 5.0.1
