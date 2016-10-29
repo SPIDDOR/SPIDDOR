@@ -1,5 +1,5 @@
 
-Get_all_attractor_wrapper.f=function(cpus,BN,time.steps,asynchronous,rep,r,combinations){
+Get_all_attractor_wrapper.f=function(cpus,BN,time.steps,asynchronous,repetitions,r,combinations){
   #Rcpp::sourceCpp(paste(getwd(),"/Boolean_func_C.cpp",sep=""))
   Attr<-list()
   o=1
@@ -7,7 +7,7 @@ Get_all_attractor_wrapper.f=function(cpus,BN,time.steps,asynchronous,rep,r,combi
   nodes.names<-rev(BN$nodes.names)
   for(i in 1:combinations){
     BN$Initial_conditions<-nodes.names[as.logical(r2[i,])]
-    Attractor<-SPIDDOR::Get_Attractor.f(BN,time.steps=time.steps,asynchronous=asynchronous,repetitions=rep,Percent.ON=TRUE)
+    Attractor<-SPIDDOR::Get_Attractor.f(BN,time.steps=time.steps,asynchronous=asynchronous,repetitions=repetitions,Percent.ON=TRUE)
     
     a<-lapply(Attr,function(x)x[1:length(BN$nodes.names)]/Attractor)
     if(!is.na(all(lapply(a,function(x)which(any(x>=1.24 | x<=0.81)))==T))){
@@ -49,7 +49,7 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
                           BN,
                           time.steps=999,
                           asynchronous,
-                          rep,
+                          repetitions,
                           r,
                           combinations=dim(r)[1]/cpus)
   
