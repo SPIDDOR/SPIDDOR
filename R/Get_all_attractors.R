@@ -1,6 +1,6 @@
 
 Get_all_attractor_wrapper.f=function(cpus,BN,time.steps,asynchronous,repetitions,r,combinations){
-  #Rcpp::sourceCpp(paste(getwd(),"/Boolean_func_C.cpp",sep=""))
+
   Attr<-list()
   o=1
   r2<-r[(1+(cpus-1)*combinations):(cpus*combinations),]
@@ -41,8 +41,6 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
   }
 
   
-  #snowfall::sfExport("Get_Attractor.f")
-  
   if(repetitions>60 & asynchronous==TRUE) repetitions=60
   
   attr_i=snowfall::sfClusterApplyLB(1:cpus,Get_all_attractor_wrapper.f,
@@ -63,9 +61,25 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
   unik <-!duplicated(round(a[,1:length(BN$nodes.names)],1))
   attractors<-as.data.frame(a[unik,])
   attractors$Recurrence<-DTT[,V1]/sum(DTT[,V1])
-  #identical(attractors[1,1:length(BN$nodes.names)],as.data.frame(DTT[1,])[1:length(BN$nodes.names)])
+  if(asynchronous==TRUE) attractors<-last_check(attractors,BN)
   return(attractors)
   
+}
+
+last_check<-function(attractors,BN){
+  rem<-c()
+  A=attractors[1:length(BN$nodes.names)]
+  for(i in 1:(dim(A)[1]-1)){
+    for(j in 2:dim(A)[1]){
+      if(i>=j) next()
+      d<-A[i,]/A[j,]
+      if(all(d>0.8 & d<1.25,na.rm=T)) rem<-c(rem,j)
+    }
+  }
+  rem<-unique(rem)
+  if(length(rem)>0) attractors<-attractors[-rem,]
+  rownames(attractors)<-seq(1:dim(attractors)[1])
+  return(attractors)
 }
 
 #EXAMPLES:
