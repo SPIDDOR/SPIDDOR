@@ -4,4 +4,4 @@ Modeling, simulation and analysis of Boolean networks applied to Systems Pharmac
 ### To install SPIDDOR:
 install.packages("devtools")  
 library(devtools)  
-install_github("ItziarIrurzun/SPIDDOR")
+install_github("SPIDDOR/SPIDDOR")
