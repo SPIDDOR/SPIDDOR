@@ -1,0 +1,8 @@
+allolactose = ( enviro_lactose )
+lac_enzymes = ( lac_mRNA )
+lac_operon = ( ( ( CAP  ) AND NOT ( CAP_mutation  )  ) AND NOT ( lac_repressor  ) )
+lac_repressor =  NOT ( ( allolactose ) )
+CAP = ( cAMP )
+lactose_breakdown = ( ( lac_enzymes  ) AND NOT ( lacZ_mutation  ) )
+cAMP =  NOT ( ( enviro_glucose ) )
+lac_mRNA = ( lac_operon )
