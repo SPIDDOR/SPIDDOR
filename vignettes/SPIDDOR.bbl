@@ -1,0 +1,64 @@
+\begin{thebibliography}{1}
+
+\bibitem{Chaouiya2013-ov}
+Claudine Chaouiya, Duncan B\'{e}renguier, Sarah~M Keating, Aur\'{e}lien Naldi,
+  Martijn~P van Iersel, Nicolas Rodriguez, Andreas Dr{\"{a}}ger, Finja
+  B{\"{u}}chel, Thomas Cokelaer, Bryan Kowal, Benjamin Wicks, Emanuel
+  Gon\c{c}alves, Julien Dorier, Michel Page, Pedro~T Monteiro, Axel von Kamp,
+  Ioannis Xenarios, Hidde de~Jong, Michael Hucka, Steffen Klamt, Denis
+  Thieffry, Nicolas Le~Nov\`{e}re, Julio Saez-Rodriguez, and Tom\'{a}\v{s}
+  Helikar.
+\newblock {SBML} qualitative models: a model representation format and
+  infrastructure to foster interactions between qualitative modelling
+  formalisms and tools.
+\newblock {\em BMC Syst. Biol.}, 7:135, 10~December 2013.
+
+\bibitem{Faure2006-ha}
+Adrien Faur\'{e}, Aur\'{e}lien Naldi, Claudine Chaouiya, and Denis Thieffry.
+\newblock Dynamical analysis of a generic boolean model for the control of the
+  mammalian cell cycle.
+\newblock {\em Bioinformatics}, 22(14):e124--31, 15~July 2006.
+
+\bibitem{Gonzalez2006-up}
+A~Gonzalez Gonzalez, A~Naldi, L~S\'{a}nchez, D~Thieffry, and C~Chaouiya.
+\newblock {GINsim}: a software suite for the qualitative modelling, simulation
+  and analysis of regulatory networks.
+\newblock {\em Biosystems.}, 84(2):91--100, May 2006.
+
+\bibitem{Helikar2015-um}
+Tom\'{a}\v{s} Helikar, Christine~E Cutucache, Lauren~M Dahlquist, Tyler~A
+  Herek, Joshua~J Larson, and Jim~A Rogers.
+\newblock Integrating interactive computational modeling in biology curricula.
+\newblock {\em PLoS Comput. Biol.}, 11(3):e1004131, March 2015.
+
+\bibitem{Herrmann2012-gm}
+Franziska Herrmann, Alexander Gro\ss{}, Dao Zhou, Hans~A Kestler, and Michael
+  K{\"{u}}hl.
+\newblock A boolean model of the cardiac gene regulatory network determining
+  first and second heart field identity.
+\newblock {\em PLoS One}, 7(10):e46798, 2~October 2012.
+
+\bibitem{Hopfensitz2012-pv}
+Martin Hopfensitz, Christoph M{\"{u}}ssel, Markus Maucher, and Hans~A Kestler.
+\newblock Attractors in boolean networks: a tutorial.
+\newblock {\em Comput. Stat.}, 28(1):19--36, 8~April 2012.
+
+\bibitem{Knaus2013-py}
+Jochen Knaus.
+\newblock snowfall: Easier cluster computing (based on snow), 2013.
+
+\bibitem{Mussel2010-zu}
+Christoph M{\"{u}}ssel, Martin Hopfensitz, and Hans~A Kestler.
+\newblock {BoolNet--an} {R} package for generation, reconstruction and analysis
+  of boolean networks.
+\newblock {\em Bioinformatics}, 26(10):1378--1380, 15~May 2010.
+
+\bibitem{Naldi2015-jp}
+Aur\'{e}lien Naldi, Pedro~T Monteiro, Christoph M{\"{u}}ssel, {Consortium for
+  Logical Models and Tools}, Hans~A Kestler, Denis Thieffry, Ioannis Xenarios,
+  Julio Saez-Rodriguez, Tomas Helikar, and Claudine Chaouiya.
+\newblock Cooperative development of logical modelling standards and tools with
+  {CoLoMoTo}.
+\newblock {\em Bioinformatics}, 31(7):1154--1159, 1~April 2015.
+
+\end{thebibliography}

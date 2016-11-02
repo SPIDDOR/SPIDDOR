@@ -8,7 +8,8 @@ Get attractors of a Boolean model
 Identifies the attractors of a Boolean model using the synchronous or asynchronous updating methods.
 }
 \usage{
-Get_all_attractors.f(cpus,BN,asynchronous=FALSE,repetitions=0,startStates=NULL)
+Get_all_attractors.f(cpus,BN,asynchronous=FALSE,repetitions=0,
+                     startStates=NULL,Percent.ON=TRUE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -23,6 +24,8 @@ logical; if FALSE the synchronous mode is selected; if TRUE the asynchronous sch
 Number of repetitions to re-compute the simulation algorithm in order to get the attractors in the asynchronous mode. We recommend first to try with a number smaller that 20. More than 60 repetitions are not allowed.
 }
 \item{startStates}{A number of starting states to test}
+\item{Percent.ON}{logical. If TRUE returns the attractor represented as the probability of activation of the nodes in the network. If FALSE returns all the states that form the attractor. Default is TRUE. If this function is used with asynchronous=TRUE, the results only will be returned with the nodes represented as \%ON.
+}
 }
 \details{
 The function searches all the attractors for networks with less than 20 nodes, as the number of initial conditions to test grow exponentially with the number of nodes. For larger networks, a subset of nodes can be defined in BN$Initial_conditions vector (<20 node names) in which all the combination of initial conditions will be tested. Additionally, a number of starting states to test  can be specified in the \code{startStates} argument of the function (<100,000).
@@ -43,7 +46,7 @@ data("cellcycle")
 BN_cellcycle<-read.Boolean.functions(Lines=BN_cellcycle$BooleanFunctions)
 
 #Get all the synchronous attractors:
-All_attr_syn<-Get_all_attractors.f(cpus=4,BN_cellcycle,asynchronous=FALSE,repetitions=12)
+All_attr_syn<-Get_all_attractors.f(cpus=4,BN_cellcycle,asynchronous=FALSE,Percent.ON=FALSE)
 print(All_attr_syn)
 }
 

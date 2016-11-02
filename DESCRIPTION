@@ -25,5 +25,4 @@ Imports: Rcpp,
     rlecuyer,
     data.table,
     gplots
-LinkingTo: Rcpp
 RoxygenNote: 5.0.1

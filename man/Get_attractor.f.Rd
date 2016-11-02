@@ -74,10 +74,10 @@ BN_cellcycle<-read.Boolean.functions(Lines=BN_cellcycle$BooleanFunctions)
 print(BN_cellcycle$Initial_condition)
 
 #Get the attractor in synchronous mode: A cycle composed of 7 states
-A_syn<-Get_Attractor.f(BN_cellcycle,repetitions=12,asynchronous=FALSE,Percent.ON=FALSE)
+A_syn<-Get_Attractor.f(BN_cellcycle,asynchronous=FALSE,Percent.ON=FALSE)
 
 #Get the attractor in synchronous mode represent with the Percent ON of the nodes:
-A_syn2<-Get_Attractor.f(BN_cellcycle,repetitions=12,asynchronous=FALSE,Percent.ON=TRUE)
+A_syn2<-Get_Attractor.f(BN_cellcycle,asynchronous=FALSE,Percent.ON=TRUE)
 
 #Get the attractor in asynchronous mode: 
 A_asyn<-Get_Attractor.f(BN_cellcycle,repetitions=12,asynchronous=TRUE,Percent.ON=TRUE)
