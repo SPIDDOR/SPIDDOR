@@ -340,7 +340,7 @@ head(Pattern)
        1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 APC_Ag 1 1 1 1 1 1 1 1 1  1  1  1  1  1  1  1  1  1  1  1
 B71    0 1 1 1 1 1 1 1 1  1  1  1  1  1  1  1  1  1  1  1
-CD40   0 1 1 0 1 0 1 0 1  0  1  0  1  0  1  0  1  0  1  0
+CD40   0 1 1 1 1 1 1 1 1  1  1  1  1  1  1  1  1  1  1  1
 B7H2   0 0 1 1 1 1 1 1 1  1  1  1  1  1  1  1  1  1  1  1
 ICOS   0 1 1 1 1 1 1 1 1  1  1  1  1  1  1  1  1  1  1  1
 CD28   0 1 1 1 1 0 1 1 1  1  0  1  1  1  1  0  1  1  0  1
@@ -357,20 +357,25 @@ AVG<-Average_simulations.f(BN,time.steps=49,repetitions=2500)
 head(AVG)
 @
 \begin{verbatim}
-       1      2      3      4      5      6      7      8   ...
+       1      2      3      4      5      6      7      8 ...
 APC_Ag 1 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000
 B71    0 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000
-CD40   0 1.0000 0.6036 0.5172 0.4828 0.5172 0.4828 0.5172
-B7H2   0 0.4896 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000
+CD40   0 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000
+B7H2   0 0.4792 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000
 ICOS   0 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000 1.0000
-CD28   0 1.0000 1.0000 0.9452 0.6620 0.4164 0.6900 0.9412
+CD28   0 1.0000 1.0000 0.9420 0.6796 0.3904 0.6664 0.9476
+CTLA4  0 0.0000 0.0000 0.1660 0.5720 0.5396 0.0800 0.0500
+CD40L  0 0.1616 0.5944 0.4056 0.5944 0.4056 0.5944 0.4056
+T0_ACT 0 0.3356 1.0000 1.0000 0.7436 0.2528 0.4168 0.8060
+IL6    0 0.5052 1.0000 0.9848 0.8540 0.5484 0.4900 0.8052
+IL12   0 0.0344 0.3624 0.6836 0.8420 0.9056 0.7868 0.6368
+IL2    0 0.0868 0.6620 1.0000 0.8872 0.5172 0.2980 0.5856
 \end{verbatim}
 
 To plot these results using ggplot2 package we need to transform the \texttt{AVG} matrix:
 <<eval=FALSE>>=
 AVG2<-toggplot(AVG)
 
-library(ggplot2)
  ggplot(data=AVG2,aes(x=time,y=value)) +
         geom_line( colour="#336600",size = 1.5) + ylab(" % of activation") +
         xlab("Time steps") + facet_wrap(~variable)
@@ -433,7 +438,7 @@ To overexpress node CD40L after its first activation when compunting the average
 <<eval=FALSE>>=
 AVG_OE_CD40L<-Average_simulations.f(BN,time.steps=19,Over_expr_AA = "CD40L",
                                    asynchronous = TRUE,repetitions=2500)
-AVG_OE_CD40L["CD40L"]
+AVG_OE_CD40L["CD40L",]
 @
 \begin{verbatim}
     1     2     3     4     5     6     7     8     9    10    11    12 ...

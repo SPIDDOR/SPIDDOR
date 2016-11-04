@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.1)  4 NOV 2016 12:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.1)  4 NOV 2016 13:13
 entering extended mode
 **SPIDDOR.tex
 ("D:\R project\SPIDDOR\vignettes\SPIDDOR.tex"
@@ -751,73 +751,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 354--358
 
  []
 
-[7] <Average.jpg, id=36, 569.0058pt x 569.0058pt>
+[7] <Average.jpg, id=36, 426.6339pt x 426.6339pt>
 File: Average.jpg Graphic file (type jpg)
  <use Average.jpg>
-Package pdftex.def Info: Average.jpg used on input line 409.
-(pdftex.def)             Requested size: 339.67029pt x 339.66965pt.
+Package pdftex.def Info: Average.jpg used on input line 414.
+(pdftex.def)             Requested size: 339.67029pt x 339.67358pt.
  [8]
 [9 <D:/R project/SPIDDOR/vignettes/Average.jpg>] [10]
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 493--493
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 498--498
 []\T1/aett/m/n/10 APC_Ag    B71   CD40   B7H2   ICOS   CD28  CTLA4  CD40L T0_AC
 T    IL6   IL12    IL2[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 493--493
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 498--498
 []   \T1/aett/m/n/10 1.0    0.5    1.0    1.0    1.0    1.0    1.0    1.0    1.
 0    1.0    1.0    1.0[] 
  []
 
 
-Overfull \hbox (20.81293pt too wide) in paragraph at lines 548--548
+Overfull \hbox (20.81293pt too wide) in paragraph at lines 553--553
 [] \T1/aett/m/n/10 [1] "CycD"   "Rb"     "E2F"    "CycE"   "CycA"   "p27"    "C
 dc20"  "Cdh1"   "UbcH10"[] 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 596--600
+Underfull \hbox (badness 10000) in paragraph at lines 601--605
 
  []
 
 [12]
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 633--633
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 638--638
 []  \T1/aett/m/n/10 Isl1 canWnt exogen_BMP2_II Bmp2 exogen_canWnt_II Tbx1 Nkx2_
 5 Dkk1 Mesp1 Fgf8 Tbx5[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 633--633
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 638--638
 []\T1/aett/m/n/10 1    0      0              1    1                0    0      
 0    0     0    0    0[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 633--633
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 638--638
 []\T1/aett/m/n/10 2    0      0              1    1                0    0      
 1    0     0    0    1[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 633--633
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 638--638
 []\T1/aett/m/n/10 3    1      1              1    0                1    1      
 1    0     0    1    0[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 651--651
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 656--656
 []  \T1/aett/m/n/10 Isl1 canWnt exogen_BMP2_II Bmp2 exogen_canWnt_II Tbx1 Nkx2_
 5 Dkk1 Mesp1 Fgf8 Tbx5[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 651--651
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 656--656
 []\T1/aett/m/n/10 1    0      0              1    1                0    0      
 0    0     0    0    0[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 651--651
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 656--656
 []\T1/aett/m/n/10 2    0      0              1    1                0    0      
 1    0     0    0    1[] 
  []
@@ -825,7 +825,7 @@ Overfull \hbox (10.33295pt too wide) in paragraph at lines 651--651
 [13] <heatmap.jpg, id=57, 426.6339pt x 426.6339pt>
 File: heatmap.jpg Graphic file (type jpg)
  <use heatmap.jpg>
-Package pdftex.def Info: heatmap.jpg used on input line 670.
+Package pdftex.def Info: heatmap.jpg used on input line 675.
 (pdftex.def)             Requested size: 339.67029pt x 339.67358pt.
  [14 <D:/R project/SPIDDOR/vignettes/heatmap.jpg>] [15]
 ("D:\R project\SPIDDOR\vignettes\SPIDDOR.bbl") [16
@@ -834,8 +834,8 @@ Package pdftex.def Info: heatmap.jpg used on input line 670.
 ("D:\R project\SPIDDOR\vignettes\SPIDDOR.aux") ) 
 Here is how much of TeX's memory you used:
  12199 strings out of 493921
- 223120 string characters out of 3144853
- 267848 words of memory out of 3000000
+ 223116 string characters out of 3144853
+ 268848 words of memory out of 3000000
  15332 multiletter control sequences out of 15000+200000
  29538 words of font info for 64 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -854,7 +854,7 @@ fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on SPIDDOR.pdf (16 pages, 768174 bytes).
+Output written on SPIDDOR.pdf (16 pages, 637028 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
