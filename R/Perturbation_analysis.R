@@ -15,9 +15,9 @@
 #   source("dynamic_evolution.R") 
 #   source("Get_attractor_parallel.R")
 #   source("Perturbation_analysis.R")
-#   KO.m<-KO_matrix.f(BN,time_steps=999,repetitions=36)
+#   KO.m<-KO_matrix.f(BN,time.steps=999,repetitions=36)
 ## Examples: Overexpression analysis
-#   OE.m<-OE_matrix.f(BN,time_steps=999,repetitions=36)
+#   OE.m<-OE_matrix.f(BN,time.steps=999,repetitions=36)
 ##########################################################################################################################################################
 
 Prob_nodes.f = function (BN,time.steps,
@@ -44,7 +44,7 @@ Prob_nodes.f = function (BN,time.steps,
 }
 
 #' @export
-KO_matrix.f = function(BN,time_steps,KO_nodes="",Over_expr="",
+KO_matrix.f = function(BN,time.steps=999,KO_nodes="",Over_expr="",
                            Over_expr_AA="",KO_times=NULL, OE_times=NULL, 
                            asynchronous=TRUE,repetitions)
 {
@@ -57,14 +57,14 @@ KO_matrix.f = function(BN,time_steps,KO_nodes="",Over_expr="",
   seed_i=runif(1,min=0,max=2147483647) #MAx value allowed. Greater than this value is considered a float number.
   set.seed(seed_i)
   
-  Freq_1=Prob_nodes.f(BN,time_steps,KO_nodes,Over_expr,Over_expr_AA,
+  Freq_1=Prob_nodes.f(BN,time.steps,KO_nodes,Over_expr,Over_expr_AA,
                       KO_times,OE_times,asynchronous,repetitions)
   for (i in 1:number.nodes)
   {
     print(i/number.nodes)
     KO_nodes = c(nodes.names[i])
     set.seed(seed_i)
-    Freq_i=Prob_nodes.f(BN,time_steps,KO_nodes,Over_expr,Over_expr_AA,
+    Freq_i=Prob_nodes.f(BN,time.steps,KO_nodes,Over_expr,Over_expr_AA,
                         KO_times,OE_times,asynchronous,repetitions)
     nodes.m[,i] = Freq_i/Freq_1
     #columns are the ko nodes
@@ -73,7 +73,7 @@ KO_matrix.f = function(BN,time_steps,KO_nodes="",Over_expr="",
 }
 
 #' @export
-OE_matrix.f = function(BN,time_steps,KO_nodes="",Over_expr="",
+OE_matrix.f = function(BN,time.steps=999,KO_nodes="",Over_expr="",
                              Over_expr_AA="",KO_times=NULL,OE_times=NULL, 
                              asynchronous=TRUE, repetitions)
 { 
@@ -86,14 +86,14 @@ OE_matrix.f = function(BN,time_steps,KO_nodes="",Over_expr="",
   seed_i=runif(1,min=0,max=2147483647) #Max value allowed. Greater than this value is considered a float number.
   set.seed(seed_i)
   
-  Freq_1=Prob_nodes.f(BN,time_steps,KO_nodes,Over_expr,Over_expr_AA,
+  Freq_1=Prob_nodes.f(BN,time.steps,KO_nodes,Over_expr,Over_expr_AA,
                       KO_times,OE_times,asynchronous,repetitions)
   for (i in 1:number.nodes)
   {
     print(i/number.nodes)
     Over_expr_AA=c(nodes.names[i])
     set.seed(seed_i)
-    Freq_i=Prob_nodes.f(BN,time_steps,KO_nodes,Over_expr,Over_expr_AA,
+    Freq_i=Prob_nodes.f(BN,time.steps,KO_nodes,Over_expr,Over_expr_AA,
                         KO_times,OE_times,asynchronous,repetitions)
     nodes.m[,i] = Freq_i/Freq_1
   }
