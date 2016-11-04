@@ -19,7 +19,7 @@ Depends:
     reshape,
     ggplot2,
     snow,
-    R (>= 3.1.2)
+    R (>= 3.1.0)
 Imports: Rcpp,
     snowfall,
     rlecuyer,

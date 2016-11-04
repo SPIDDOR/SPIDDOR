@@ -9,5 +9,5 @@
 \contentsline {section}{\numberline {4}Simulation algorithm}{7}
 \contentsline {subsection}{\numberline {4.1}Perturbation of the system}{8}
 \contentsline {section}{\numberline {5}Attractors}{11}
-\contentsline {section}{\numberline {6}Perturbation analysis}{13}
+\contentsline {section}{\numberline {6}Perturbation analysis}{14}
 \contentsline {section}{\numberline {7}Model interoperability}{14}

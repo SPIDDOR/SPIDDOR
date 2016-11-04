@@ -451,6 +451,21 @@ But if we only want to knock out ICOS from time step 5 to 10, we call:
  0  1  1  1  0  0  0  0  0  0  1  1  1  1  1  1  1  1  1  1 
 \end{verbatim}
 
+To knockout ICOS and B71, one from time step 5 to 10 and the other from time step 10 to 15:
+\begin{Schunk}
+\begin{Sinput}
+> P_KOICOS_B71<-dynamic_evolution.f(BN,time.steps=19,KO_nodes=c("ICOS","B71"), 
++                                   KO_times=list(seq(5,10),seq(10,15)),
++                                   asynchronous = T)
+> P_KOICOS_B71[c("ICOS","B71"),]
+\end{Sinput}
+\end{Schunk}
+\begin{verbatim}
+     1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+ICOS 0 1 1 1 0 0 0 0 0  0  1  1  1  1  1  1  1  1  1  1
+B71  0 1 1 1 1 1 1 1 1  0  0  0  0  0  0  1  1  1  1  1
+\end{verbatim}
+
 To overexpress node CD40L after its first activation when compunting the average trajectory of the network, we use: 
 \begin{Schunk}
 \begin{Sinput}
