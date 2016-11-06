@@ -28,8 +28,8 @@ Kauffman, S. A. 1969. "Metabolic Stability and Epigenesis in Randomly Constructe
 Saadatpour, A. and Albert, R. (2013). Boolean modeling of biological regulatory
 networks: A methodology tutorial. Methods, 62(1).
 
-Ruiz-Cerda, M. L., Irurzun-Arana, I., Gonzalez-Garcia, I., Hu, C., Zhou, H., Vermeulen,
-A., Troconiz, I. n. F., and Gomez-Mantilla, J. D. 2016. "Towards patient
+Ruiz-Cerdá, M. L., Irurzun-Arana, I., González-García, I., Hu, C., Zhou, H., Vermeulen,
+A., Trocóniz, I., and Gómez-Mantilla, J. D. 2016. "Towards patient
 stratification and treatment in the autoimmune disease lupus erythematosus using
 a systems pharmacology approach". Eur. J. Pharm. Sci.
 }
