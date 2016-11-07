@@ -8,7 +8,7 @@ Connect to Rtools
 Updates the path environment variable for the current R session in order to connect with the Rtools gcc compiler.
 }
 \usage{
-Connect2Rtools(path = "C:\\Rtools")
+Connect2Rtools(path = "C:\\\Rtools")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -21,7 +21,7 @@ Windows users that do not want to use Connect2Rtools each time a R session is op
 
 \examples{
 \dontrun{
-Connect2Rtools(path = "D:\\Rtools")
+Connect2Rtools(path = "D:\\\Rtools")
 }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
