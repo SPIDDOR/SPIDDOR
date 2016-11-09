@@ -26,7 +26,7 @@ read.Boolean.functions.R<-function(file=NULL,Lines=NULL){
     reg<-strsplit(c[2], split = "[&\\!\\|\\(\\)]",perl=TRUE)[[1]]
     reg<-reg[!(reg%in%"")]
     reg<-reg[!reg%in%c(0,1)]
-    reg<-gsub("(U|MOD|ANY)_","",reg,perl=TRUE)#ignore.case=T)
+    reg<-gsub("(THR|MOD|ANY)_","",reg,perl=TRUE)#ignore.case=T)
     reg<-gsub("[-\\.\\:]","_",reg,perl=TRUE)
     reg<-gsub("[+=*]","",reg,perl=TRUE)
     reg<-gsub("\\[.*?]","",reg)
@@ -90,8 +90,8 @@ read.Boolean.functions.R<-function(file=NULL,Lines=NULL){
 
       if(reg[i]==output & length(reg[!reg%in%""])==1)  Initial_conditions<-c(Initial_conditions,output)
       #Hay U?
-      if(grepl("U_",reg[i],perl=TRUE)){
-        reg[i]<-gsub("U_","",reg[i],perl=TRUE)
+      if(grepl("THR_",reg[i],perl=TRUE)){
+        reg[i]<-gsub("THR_","",reg[i],perl=TRUE)
         if(gregexpr("\\[", reg[i])!=-1){
           if(suppressWarnings(is.na(as.numeric(gsub("\\[|\\]", "", regmatches(reg[i], gregexpr("\\[.*?\\]", reg[i]))[[1]]))))){
             U_duration<-c(U_duration,3)
@@ -215,16 +215,14 @@ read.Boolean.functions.R<-function(file=NULL,Lines=NULL){
 
 
 #Test:
-#source("read_Boolean_functions.R")
-#source("read_Boolean_functions_R.R")
-#source("write_dynamic_evolution.R")
+# source("R/read_Boolean_functions.R")
+# source("R/read_Boolean_functions_R.R")
+# source("R/write_dynamic_evolution.R")
 
-#file<-"Example_networks/example_network.txt"
 #
-#BN<-read.Boolean.functions(file,language="R")
+#data("Example_network")
+#BN<-read.Boolean.functions(Lines=BN$BooleanFunctions,language="R")
 #source("pattern_creator.R")
 
 
 #pattern=dynamic_evolution.f(BN,time.steps = 30)
-
-#gsub("\\[|\\]", "", regmatches(gene, gregexpr("\\[.*?\\]", gene))[[1]])

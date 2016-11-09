@@ -19,7 +19,7 @@ dynamic_evolution.f(BN,
 \arguments{
      \item{BN}{A list containing the most representative information of the loaded network.
      \itemize{
-\item{node.names:}{ A vector of the node names of the network}
+\item{nodes.names:}{ A vector of the node names of the network}
 \item{Initial_conditions:}{ A vector with the name of the nodes that will start in ON state in the first iteration of the simulation algorithm.}
 \item{Modulator:}{ The duration of the modulation interactions that take place in the network dynamics. It could have specific arguments for each Boolean expression where a modulation occurs, or it can have a general argument "modulation_dur" where the user can specify a general time duration for all the modulation of the network.}
 \item{Arguments:}{ A list with other arguments needed for a correct simulation of the network. Here, we included the duration of the threshold operators (U). }

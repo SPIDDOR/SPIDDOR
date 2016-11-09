@@ -23,7 +23,7 @@ read.Boolean.functions.C<-function(file=NULL,Lines=NULL){
     reg<-strsplit(c[2], split = "[&\\!\\|\\(\\)]",perl=TRUE)[[1]]
     reg<-reg[!(reg%in%"")]
     reg<-reg[!reg%in%c(0,1)]
-    reg<-gsub("(U|MOD|ANY)_","",reg,perl=TRUE)#ignore.case=T)
+    reg<-gsub("(THR|MOD|ANY)_","",reg,perl=TRUE)#ignore.case=T)
     reg<-gsub("[-\\.\\:]","_",reg,perl=TRUE)
     reg<-gsub("[+=*]","",reg,perl=TRUE)
     reg<-gsub("\\[.*?]","",reg)
@@ -93,8 +93,8 @@ read.Boolean.functions.C<-function(file=NULL,Lines=NULL){
       
       if(reg[i]==output & length(reg[!reg%in%""])==1)  Initial_conditions<-c(Initial_conditions,output)
       #Hay U?
-      if(grepl("U_",reg[i],perl=TRUE)){
-        reg[i]<-gsub("U_","",reg[i],perl=TRUE)
+      if(grepl("THR_",reg[i],perl=TRUE)){
+        reg[i]<-gsub("THR_","",reg[i],perl=TRUE)
         if(gregexpr("\\[", reg[i])!=-1){
           if(suppressWarnings(is.na(as.numeric(gsub("\\[|\\]", "", regmatches(reg[i], gregexpr("\\[.*?\\]", reg[i]))[[1]]))))){
             U_duration<-c(U_duration,3)
@@ -120,7 +120,7 @@ read.Boolean.functions.C<-function(file=NULL,Lines=NULL){
                    reg[i],"max_",output,")",sep="")
         }
         
-        regulators_header<-c(regulators_header,paste("\n\tint ",reg[i],'= std::distance(nodes_names, std::find(nodes_names, nodes_names + (n_nodes - 1),"',gsub("U_","",reg[i],perl=TRUE),'"));',sep=""))
+        regulators_header<-c(regulators_header,paste("\n\tint ",reg[i],'= std::distance(nodes_names, std::find(nodes_names, nodes_names + (n_nodes - 1),"',gsub("THR_","",reg[i],perl=TRUE),'"));',sep=""))
         
       }else if(grepl("MOD_",reg[i],perl=TRUE)){
         reg[i]<-gsub("MOD_","",reg[i],perl=TRUE)

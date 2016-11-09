@@ -82,14 +82,14 @@ The main operations of Boolean algebra are the conjunction AND ($\&$ in the txt 
 Apart from these basic operators, some convenience operations have been defined:
 \begin{itemize}
 
-\item{$U$:}{ threshold operator used to check whether a regulator of a Boolean function is activated in the last n iterations that the user selects (n 3 by default). The $U$ operator requires a duration argument which indicates the number of previous iteration that must be evaluated for a regulator node. This argument can be numerical or a character in which case its name will be saved inside a list where the user can select the value afterwards. Example: 
+\item{$THR$:}{ threshold operator used to check whether a regulator of a Boolean function is activated in the last n iterations that the user selects (n 3 by default). The $THR$ operator requires a duration argument which indicates the number of previous iteration that must be evaluated for a regulator node. This argument can be numerical or a character in which case its name will be saved inside a list where the user can select the value afterwards. Example: 
 
 \begin{verbatim}
-CTLA4 = U_T0_ACT[3] or CTLA4 = U_T0_ACT[T0_ACTmax] 
+CTLA4 = THR_T0_ACT[3] or CTLA4 = THR_T0_ACT[T0_ACTmax] 
  \end{verbatim}
 }
  
-\item{$MOD$:}{ modulator operator that makes the same threshold function as the $U$ operator but only affecting to the nodes that have a modulation interaction in the Boolean functions of the network.
+\item{$MOD$:}{ modulator operator that makes the same threshold function as the $THR$ operator but only affecting to the nodes that have a modulation interaction in the Boolean functions of the network.
 Example: 
 
 \begin{verbatim}
@@ -115,7 +115,7 @@ ICOS = APC-Ag
 CD40 = APC-Ag
 B7H2 = ICOS
 CD28 = ! CTLA4
-CTLA4= U_T0_ACT[3]
+CTLA4= THR_T0_ACT[3]
 CD40L = ICOS & B7H2 &! (CD40 & CD40L)
 T0_ACT = ((CD28 & B71) | (T0_ACT & B7H2) &! (MOD_T0_ACT & MOD_B7H2)) 
           &! (CTLA4 & B71)
@@ -155,7 +155,7 @@ Once all the \emph{BFs} are specified in the text file, they can be loaded in R 
 \item{\textbf{node.names}:}{ A vector of the node names of the network}
 \item{\textbf{Initial\_conditions}:}{ A vector with the name of the nodes that will start in ON state in the first iteration of the simulation algorithm.}
 \item{\textbf{Modulator}:}{ The duration of the modulation interactions that take place in the network dynamics. It could have specific arguments for each Boolean expression where a modulation occurs, or it can have a general argument \texttt{modulation\_dur} where the user can specify a general time duration for all the modulation of the network.}
-\item{\textbf{Arguments}:}{ A list with other arguments needed for a correct simulation of the network. Here, we included the duration of the threshold operators (U). }
+\item{\textbf{Arguments}:}{ A list with other arguments needed for a correct simulation of the network. Here, we included the duration of the threshold operators (THR). }
 \item{\textbf{Polymorphism}:}{ A vector specifying the activity level of each node in the network. Default values are 1 for each node, meaning a 100\% activity for all the components of the network. To perform a mutational study and change the activity of a node to 50\% the next command can be used: 
 \begin{Schunk}
 \begin{Sinput}
@@ -204,7 +204,7 @@ ICOS = APC-Ag
 CD40 = APC-Ag
 B7H2 = ICOS
 CD28 = ! CTLA4
-CTLA4= U_T0_ACT[3]
+CTLA4= THR_T0_ACT[3]
 CD40L = ICOS & B7H2 &! (CD40 & CD40L)
 \end{BVerbatim}
 \\
@@ -255,7 +255,7 @@ ICOS = APC-Ag
 CD40 = APC-Ag
 B7H2 = ICOS
 CD28 = ! CTLA4
-CTLA4= U_T0_ACT[3]
+CTLA4= THR_T0_ACT[3]
 CD40L = ICOS & B7H2 &! (CD40 & CD40L)
 \end{BVerbatim}
 \\

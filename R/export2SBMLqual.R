@@ -25,7 +25,7 @@ export2SBMLqual<-function(inputfile=NULL,Lines=NULL,file="output.sbml"){
     c[2]<-gsub(" ","",c[2],perl=TRUE)
     reg<-strsplit(c[2], split = "[&\\!\\|\\(\\)]",perl=TRUE)[[1]]
     reg<-reg[!(reg%in%"")]
-    reg<-gsub("(U|MOD|ANY)_","",reg,perl=TRUE)#ignore.case=T)
+    reg<-gsub("(THR|MOD|ANY)_","",reg,perl=TRUE)#ignore.case=T)
     reg<-gsub("[-\\.\\:]","_",reg,perl=TRUE)
     reg<-gsub("[+=*]","",reg,perl=TRUE)
     reg<-gsub("\\[.*?]","",reg)
@@ -90,7 +90,7 @@ export2SBMLqual<-function(inputfile=NULL,Lines=NULL,file="output.sbml"){
     cat(file = t, "\t\t\t\t<qual:listOfInputs>\n")
     #Regulators:
     c[2]<-gsub(" ","",c[2],perl=TRUE)
-    c[2]<-gsub("(U|MOD|ANY)_","",c[2],perl=TRUE)#ignore.case=T)
+    c[2]<-gsub("(THR|MOD|ANY)_","",c[2],perl=TRUE)#ignore.case=T)
     c[2]<-gsub("[-\\.\\:]","_",c[2],perl=TRUE)
     c[2]<-gsub("[+=*]","",c[2],perl=TRUE)
     c[2]<-gsub("\\[.*?]","",c[2])

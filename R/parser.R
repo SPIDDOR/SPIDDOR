@@ -17,7 +17,7 @@ parser <- function(expr)
 
 SBML_regulators<-function(regulator,NOT=FALSE){
  # regulators<-c()
-  regulator<-gsub("(U|MOD|ANY)_","",regulator,perl=TRUE)
+  regulator<-gsub("(THR|MOD|ANY)_","",regulator,perl=TRUE)
   regulator<-gsub("[-\\.]","_",regulator,perl=TRUE)
   regulator<-gsub("\\[.*?]","",regulator)
   v<-c("<apply>\n","\t<eq/>\n",paste("\t<ci>",regulator,"</ci>\n",sep=""))
