@@ -28,7 +28,7 @@ Number of repetitions to re-compute the simulation algorithm in order to get the
 }
 }
 \details{
-The function searches all the attractors for networks with less than 20 nodes, as the number of initial conditions to test grow exponentially with the number of nodes. For larger networks, a subset of nodes can be defined in BN$Initial_conditions vector (<20 node names) in which all the combination of initial conditions will be tested. Additionally, a number of starting states to test  can be specified in the \code{startStates} argument of the function (<100,000).
+The function searches all the attractors for networks with less than 20 nodes, as the number of initial conditions to test grow exponentially with the number of nodes. For larger networks, a subset of nodes can be defined in BN$Initial_conditions vector (<20 node names) in which all the combination of initial conditions will be tested. Additionally, a number of starting states to test  can be specified in the \code{startStates} argument of the function (<1,000,000).
 
 This function is parallelized with the snowfall library.
 }

@@ -52,7 +52,7 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
     BN$nodes.names<-BN$nodes.names[order(match(BN$nodes.names,BN$Initial_conditions))]
     r<-r[1:(2^length(BN$Initial_conditions))]
   }else if(length(startStates)!=0){
-    if(startStates>100000) stop("Too many starting states")
+    if(startStates>1000000) stop("Too many starting states")
     else if(startStates>(2^length(BN$nodes.names))) startStates=2^length(BN$nodes.names)
     r<-r[1:startStates,]
   }
