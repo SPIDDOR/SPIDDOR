@@ -11,7 +11,7 @@ Get the attractor given an initial condition using a parallelized code using the
 Get_Attractor_parallel.f(cpus,
                         BN,
                         time.steps=999,
-                        KO_nodes="",  
+                        Knockouts="",  
                         Over_expr="", 
                         Over_expr_AA="",
                         KO_times=NULL,
@@ -29,7 +29,7 @@ Get_Attractor_parallel.f(cpus,
 \item{time.steps}{
 A number specifying the iterations for the simulation algorithm. We recommend to use the default value of 999 (1000 time steps in total, including the initial conditions).
 }
-\item{KO_nodes}{
+\item{Knockouts}{
 A character vector with the name of the nodes to knockout (fixed to 0) over all the simulation (empty by default).
 }
 \item{Over_expr}{
@@ -39,7 +39,7 @@ A character vector with the name of the nodes to overexpress (fixed to 1) over a
 A character vector with the name of the nodes to overexpress (fixed to 1) after their first activation (empty by default).
 }
  \item{KO_times}{
-A numeric vector specifying the iterations where the nodes in KO_nodes argument will be fixed to 0. If empty the knockout is applied to the nodes for the entire simulation (empty by default).
+A numeric vector specifying the iterations where the nodes in Knockouts argument will be fixed to 0. If empty the knockout is applied to the nodes for the entire simulation (empty by default).
 }
  \item{OE_times}{
 A numeric vector specifying the iterations where the nodes in Over_expr argument will be fixed to 1. If empty the overexpression is applied to the nodes for the entire simulation (empty by default).

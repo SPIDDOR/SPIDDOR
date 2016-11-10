@@ -10,7 +10,7 @@
 ##############################################################################################
 #' @export
 Average_simulations.f=function(BN,time.steps,
-                               KO_nodes="",  
+                               Knockouts="",  
                                Over_expr="", 
                                Over_expr_AA="",
                                KO_times=NULL,
@@ -19,7 +19,7 @@ Average_simulations.f=function(BN,time.steps,
                                repetitions)
 {
 
-  pattern_i<-replicate(repetitions,dynamic_evolution.f(BN, time.steps,KO_nodes,Over_expr,
+  pattern_i<-replicate(repetitions,dynamic_evolution.f(BN, time.steps,Knockouts,Over_expr,
                                                     Over_expr_AA,KO_times,OE_times,asynchronous), simplify=FALSE)
   pattern_final<-Reduce('+', pattern_i)
 

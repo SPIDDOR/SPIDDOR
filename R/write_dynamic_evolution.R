@@ -2,7 +2,7 @@ write.dynamic_evolution=function(fun_header)
 {
 
   Head<-'\n\ndynamic_evolution.f=function(BN, time.steps,
-                                  KO_nodes="",Over_expr="",Over_expr_AA="",
+                                  Knockouts="",Over_expr="",Over_expr_AA="",
                                   KO_times=NULL,OE_times=NULL,
                                   asynchronous=TRUE)
 {
@@ -15,12 +15,12 @@ write.dynamic_evolution=function(fun_header)
   \n
 
   if(is.null(KO_times)){
-    pattern.m=KO_node.f(KO_nodes,pattern.m)
-    BN$nodes.names<-BN$nodes.names[!BN$nodes.names %in% KO_nodes]
-  }else if(length(KO_nodes)!=length(KO_times) & length(KO_times)==1){
-    KO_times=rep(KO_times,length(KO_nodes))
-  }else if(length(KO_nodes)!=length(KO_times) & length(KO_times)!=1){
-    stop("KO_nodes and KO_times arguments must be the same length")
+    pattern.m=KO_node.f(Knockouts,pattern.m)
+    BN$nodes.names<-BN$nodes.names[!BN$nodes.names %in% Knockouts]
+  }else if(length(Knockouts)!=length(KO_times) & length(KO_times)==1){
+    KO_times=rep(KO_times,length(Knockouts))
+  }else if(length(Knockouts)!=length(KO_times) & length(KO_times)!=1){
+    stop("Knockouts and KO_times arguments must be the same length")
     return(0)
   }
 
@@ -51,7 +51,7 @@ write.dynamic_evolution=function(fun_header)
       }
       if((node_j %in% Over_expr) && (i %in% OE_times[[match(node_j,Over_expr)]])) 
         pattern.m[node_j,i] = 1
-      else if((node_j %in% KO_nodes) && (i %in% KO_times[[match(node_j,KO_nodes)]]))
+      else if((node_j %in% Knockouts) && (i %in% KO_times[[match(node_j,Knockouts)]]))
         pattern.m[node_j,i] = 0 '
   
   Pie_dyn<-"\n\t\t\tupdate.m[node_j,i]=1 \n \t\t} \n\t}\n\treturn(pattern.m) \n}"

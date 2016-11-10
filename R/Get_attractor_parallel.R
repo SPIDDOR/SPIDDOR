@@ -24,7 +24,7 @@ NULL
 Get_attractor_wrapper.f=function(cpus, #number of cores
                                  BN,
                                  time.steps,
-                                 KO_nodes="",  
+                                 Knockouts="",  
                                  Over_expr="", 
                                  Over_expr_AA="",
                                  KO_times=NULL,
@@ -34,7 +34,7 @@ Get_attractor_wrapper.f=function(cpus, #number of cores
                                  Percent.ON=TRUE)
 {
  
-  M<-dynamic_evolution.f(BN, time.steps,KO_nodes,Over_expr,
+  M<-dynamic_evolution.f(BN, time.steps,Knockouts,Over_expr,
                          Over_expr_AA,KO_times,OE_times,asynchronous=FALSE)
   nodes.names<-BN$nodes.names
   attr<-SPIDDOR::get.attractor_syn(M)
@@ -51,7 +51,7 @@ Get_attractor_wrapper.f=function(cpus, #number of cores
     return(attr)
   }
   
-  pattern_i<-replicate(repetitions,dynamic_evolution.f(BN, time.steps,KO_nodes,Over_expr,
+  pattern_i<-replicate(repetitions,dynamic_evolution.f(BN, time.steps,Knockouts,Over_expr,
                                                        Over_expr_AA,KO_times,OE_times,asynchronous), simplify=FALSE)
   #replicate function repits time_evolution.f function "repetitions" times. 
   
@@ -67,7 +67,7 @@ Get_attractor_wrapper.f=function(cpus, #number of cores
 Get_Attractor_parallel.f=function(cpus,
                                   BN,
                                   time.steps=999,
-                                  KO_nodes="",  
+                                  Knockouts="",  
                                   Over_expr="", 
                                   Over_expr_AA="",
                                   KO_times=NULL,
@@ -86,7 +86,7 @@ Get_Attractor_parallel.f=function(cpus,
   average_i=snowfall::sfClusterApplyLB(1:cpus,Get_attractor_wrapper.f,
                              BN,
                              time.steps,
-                             KO_nodes,  
+                             Knockouts,  
                              Over_expr, 
                              Over_expr_AA,
                              KO_times,
@@ -114,7 +114,7 @@ Get_Attractor_parallel.f=function(cpus,
 # library(snowfall)
 # Attr_syn<-Get_attractor_parallel.f(2,BN,999,repetitions=12,asynchronous=FALSE,Percent.ON=TRUE)
 
-# Attr_KO_CD28<-Get_attractor_parallel.f(4,BN,999,KO_nodes="CD28",repetitions=12,Percent.ON=FALSE)
+# Attr_KO_CD28<-Get_attractor_parallel.f(4,BN,999,Knockouts="CD28",repetitions=12,Percent.ON=FALSE)
 # Freq_KO_CD28<-apply(Attr_KO_CD28[,1:length(BN$nodes.names)],2,function(i) sum(i*Attr_KO_CD28$Count))/sum(Attr_KO_CD28$Count)
 #
 # Attr_OE_CD40L<-Get_attractor_parallel.f(4,BN,999,Over_expr_AA="CD40L",repetitions=12,Percent.ON=TRUE)

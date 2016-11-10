@@ -388,10 +388,10 @@ AVG2<-toggplot(AVG)
 \subsection{Perturbation of the system}
 In order to know which node perturbations can result in a significant change of the network dynamics, we can manipulate the system by knocking out or overexpressing the nodes. A knockout implies the deactivation of a component during all the simulation, whereas an overexpression generates a persistent activation of a node. Another possibility is to overexpress a node but only after its first activation or to activate/deactivate a node for some iterations. The majority of the function of SPIDDOR have arguments to introduce these perturbations:
 \begin{itemize}
-  \item{KO\_nodes:}{ A character vector with the name of the nodes to knockout (fixed to 0) over all the simulations(empty by default).}
+  \item{Knockouts:}{ A character vector with the name of the nodes to knockout (fixed to 0) over all the simulations(empty by default).}
   \item{Over\_expr:}{ A character vector with the name of the nodes to overexpress (fixed to 1) over all the simulations (empty by default).}
   \item{Over\_expr\_AA:}{ A character vector with the name of the nodes to overexpress (fixed to 1) after their first activation (empty by default).}
-  \item{KO\_times:}{ A numeric vector specifying the iterations where the nodes in KO\_nodes argument will be fixed to 0. If empty the knockout is applied to the nodes for the entire simulation (empty by default).}
+  \item{KO\_times:}{ A numeric vector specifying the iterations where the nodes in Knockouts argument will be fixed to 0. If empty the knockout is applied to the nodes for the entire simulation (empty by default).}
   \item{OE\_times:}{ A numeric vector specifying the iterations where the nodes in Over\_expr argument will be fixed to 1. If empty the overexpression is applied to the nodes for the entire simulation (empty by default).}
 \end{itemize}
 
@@ -402,7 +402,7 @@ BN <- read.Boolean.functions(Lines=BN$BooleanFunctions)
 @
 \texttt{\#Dynamic evolution of the network with a knockout in ICOS:}
 <<eval=FALSE>>=
-P_KOICOS<-dynamic_evolution.f(BN,time.steps=19,KO_nodes="ICOS",asynchronous = T)
+P_KOICOS<-dynamic_evolution.f(BN,time.steps=19,Knockouts="ICOS",asynchronous = T)
 P_KOICOS["ICOS",]
 @
 \begin{verbatim}
@@ -411,7 +411,7 @@ P_KOICOS["ICOS",]
 \end{verbatim}
 But if we only want to knock out ICOS from time step 5 to 10, we call:
 <<eval=FALSE>>=
-P_KOICOS2<-dynamic_evolution.f(BN,time.steps=19,KO_nodes="ICOS",
+P_KOICOS2<-dynamic_evolution.f(BN,time.steps=19,Knockouts="ICOS",
                                KO_times=seq(5,10),asynchronous = T)
 P_KOICOS2["ICOS",]
 @
@@ -422,7 +422,7 @@ P_KOICOS2["ICOS",]
 
 To knockout ICOS and B71, one from time step 5 to 10 and the other from time step 10 to 15:
 <<eval=FALSE>>=
-P_KOICOS_B71<-dynamic_evolution.f(BN,time.steps=19,KO_nodes=c("ICOS","B71"), 
+P_KOICOS_B71<-dynamic_evolution.f(BN,time.steps=19,Knockouts=c("ICOS","B71"), 
                                   KO_times=list(seq(5,10),seq(10,15)),
                                   asynchronous = T)
 

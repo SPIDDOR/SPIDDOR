@@ -5,7 +5,7 @@ write.dynamic_evolution_cpp=function(arguments,fun_header,nodes.names)
   Head<-paste("
 // [[Rcpp::export]]
 NumericVector time_evolution_f(const int& ts",
-              arguments,",std::vector<std::string> KO_nodes,std::vector<std::string> Over_expr,
+              arguments,",std::vector<std::string> Knockouts,std::vector<std::string> Over_expr,
               std::vector<std::string> Over_expr_AA,
               List MCAB_times,List Tx_times, List Polym,
               IntegerVector Initial_cond, const bool asynchronous){
@@ -42,14 +42,14 @@ dyn2<-"\n
           continue;
         }
       }
-      if (std::find(KO_nodes.begin(), KO_nodes.end(), node_i) != KO_nodes.end()){// && MCAB_times.size()==0){
+      if (std::find(Knockouts.begin(), Knockouts.end(), node_i) != Knockouts.end()){// && MCAB_times.size()==0){
         int node = std::distance(nodes_names, std::find(nodes_names, nodes_names + (n_nodes - 1), node_i));
         if(MCAB_times.size()==0){
           pattern[node*(ts + 1) + j] = 0;
           update[samples.at(i)*(ts+1) + j] = 1;
           continue;
         }else{
-          int pos = std::find(KO_nodes.begin(), KO_nodes.end(), node_i) - KO_nodes.begin();
+          int pos = std::find(Knockouts.begin(), Knockouts.end(), node_i) - Knockouts.begin();
           std::vector<int>KO_time=MCAB_times[pos];
           if(std::find(KO_time.begin(), KO_time.end(), j) != KO_time.end()){
             pattern[node*(ts + 1) + j] = 0;

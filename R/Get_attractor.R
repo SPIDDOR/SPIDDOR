@@ -10,7 +10,7 @@ NULL
 #' @export
 Get_Attractor.f=function(BN,
                         time.steps=999,
-                        KO_nodes="",  
+                        Knockouts="",  
                         Over_expr="", 
                         Over_expr_AA="",
                         KO_times=NULL,
@@ -20,7 +20,7 @@ Get_Attractor.f=function(BN,
                         Percent.ON=TRUE)
 {
 
-  M<-dynamic_evolution.f(BN, time.steps,KO_nodes,Over_expr,
+  M<-dynamic_evolution.f(BN, time.steps,Knockouts,Over_expr,
                          Over_expr_AA,KO_times,OE_times,asynchronous=FALSE)
   nodes.names<-BN$nodes.names
   attr<-get.attractor_syn(M)
@@ -37,7 +37,7 @@ Get_Attractor.f=function(BN,
   } 
   
   if(repetitions>100) repetitions=100
-  pattern_i<-replicate(repetitions,dynamic_evolution.f(BN, time.steps,KO_nodes,Over_expr,
+  pattern_i<-replicate(repetitions,dynamic_evolution.f(BN, time.steps,Knockouts,Over_expr,
                                                        Over_expr_AA,KO_times,OE_times,asynchronous), 
                        simplify=FALSE)
   

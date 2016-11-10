@@ -23,7 +23,7 @@ logical; if FALSE the synchronous mode is selected; if TRUE the asynchronous sch
 \item{repetitions}{
 Number of repetitions to re-compute the simulation algorithm in order to get the attractors in the asynchronous mode. We recommend first to try with a number smaller that 20. More than 60 repetitions are not allowed.
 }
-\item{startStates}{A number of starting states to test}
+\item{startStates}{A number of starting states to test. No more than 1,000,000 starting states are not allowed.}
 \item{Percent.ON}{logical. If TRUE returns the attractor represented as the probability of activation of the nodes in the network. If FALSE returns all the states that form the attractor. Default is TRUE. If this function is used with asynchronous=TRUE, the results only will be returned with the nodes represented as \%ON.
 }
 }
