@@ -48,7 +48,7 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
   
   
   if(length(BN$nodes.names)>=20 & length(startStates)==0){
-    if(length(BN$Initial_conditions)>=20) stop("To many nodes in the Initial conditions")
+    if(length(BN$Initial_conditions)>=20) stop("Too many nodes in the Initial conditions")
     
     BN$nodes.names<-BN$nodes.names[order(match(BN$nodes.names,BN$Initial_conditions))]
     r<-do.call(data.table::CJ, replicate(length(BN$Initial_conditions), 0:1, FALSE))
