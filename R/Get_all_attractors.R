@@ -8,14 +8,14 @@ Get_all_attractor_wrapper.f=function(cpus,BN,time.steps,asynchronous,repetitions
   for(i in 1:combinations){
     BN$Initial_conditions<-nodes.names[as.logical(r2[i,])]
     if(asynchronous==FALSE & Percent.ON==FALSE){
-      Attractor_states<-Get_Attractor.f(BN,time.steps=time.steps,asynchronous=asynchronous,repetitions=repetitions,Percent.ON=FALSE)
+      Attractor_states<-SPIDDOR::Get_Attractor.f(BN,time.steps=time.steps,asynchronous=asynchronous,repetitions=repetitions,Percent.ON=FALSE)
       if(length(Attractor_states)==length(BN$nodes.names)){
         Attractor<-Attractor_states
       }else{
         Attractor<-apply(Attractor_states,2,sum)/dim(Attractor_states)[1]
       }
     }else{
-      Attractor<-Get_Attractor.f(BN,time.steps=time.steps,asynchronous=asynchronous,repetitions=repetitions,Percent.ON=TRUE)
+      Attractor<-SPIDDOR::Get_Attractor.f(BN,time.steps=time.steps,asynchronous=asynchronous,repetitions=repetitions,Percent.ON=TRUE)
     }
     
     a<-lapply(Attr,function(x)x[1:length(BN$nodes.names)]/Attractor)
@@ -46,14 +46,24 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
   
   BN$Polymorphism<-setNames(rep(1,length(BN$nodes.names)),BN$nodes.names)
   
-  r<-do.call(data.table::CJ, replicate(length(BN$nodes.names), 0:1, FALSE))
+  
   if(length(BN$nodes.names)>=20 & length(startStates)==0){
+    if(length(BN$Initial_conditions)>=20) stop("To many nodes in the Initial conditions")
+    
     BN$nodes.names<-BN$nodes.names[order(match(BN$nodes.names,BN$Initial_conditions))]
-    r<-r[1:(2^length(BN$Initial_conditions))]
+    r<-do.call(data.table::CJ, replicate(length(BN$Initial_conditions), 0:1, FALSE))
+    r<-data.frame(r)
+    r<-cbind(r,matrix(0,nrow=2^length(BN$Initial_conditions),ncol=length(BN$nodes.names)-ncol(r)))
+    # r<-r[1:(2^length(BN$Initial_conditions))]
   }else if(length(startStates)!=0){
     if(startStates>1000000) stop("Too many starting states")
     else if(startStates>(2^length(BN$nodes.names))) startStates=2^length(BN$nodes.names)
+    r<-do.call(data.table::CJ, replicate(ceiling(log2(startStates)), 0:1, FALSE))
     r<-r[1:startStates,]
+    r<-data.frame(r)
+    r<-cbind(r,matrix(0,nrow=startStates,ncol=length(BN$nodes.names)-ncol(r)))
+  }else{
+    r<-do.call(data.table::CJ, replicate(length(BN$nodes.names), 0:1, FALSE))
   }
   
   
