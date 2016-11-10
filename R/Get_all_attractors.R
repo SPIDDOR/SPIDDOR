@@ -41,7 +41,6 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
   
   snowfall::sfInit( parallel=TRUE, cpus=cpus)
   capture.output(snowfall::sfSource("dynamic_evolution.R"),file='NUL')
-  capture.output(snowfall::sfSource(paste(system.file("R",package="SPIDDOR"),"/Get_attractor.R",sep="")),file='NUL')
   
   snowfall::sfClusterSetupRNGstream(seed=runif(1,min=0,max=9.22e+18))
   
