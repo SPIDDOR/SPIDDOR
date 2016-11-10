@@ -94,6 +94,12 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
   n<-BN$nodes.names
   DTT<-DTT[,sum(Recurrence),by=n]
   unik <-!duplicated(round(a[,1:length(BN$nodes.names)],1))
+  if(length(a[unik,])==(length(BN$nodes.names)+1)){
+    attractors<-a[unik,]
+    attractors[length(BN$nodes.names)+1]<-DTT[,V1]/sum(DTT[,V1])
+    #colnames(attractors)<-c(BN$nodes.names,"Recurrence")
+    return(attractors)
+  }
   attractors<-as.data.frame(a[unik,])
   attractors$Recurrence<-DTT[,V1]/sum(DTT[,V1])
   if(asynchronous==TRUE) attractors<-last_check(attractors,BN)
