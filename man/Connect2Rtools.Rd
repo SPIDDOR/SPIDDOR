@@ -8,7 +8,7 @@ Connect to Rtools
 Updates the path environment variable for the current R session in order to connect with the Rtools gcc compiler.
 }
 \usage{
-Connect2Rtools(path = "C:\\\Rtools")
+Connect2Rtools(path = "C:/Rtools")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -16,7 +16,7 @@ Connect2Rtools(path = "C:\\\Rtools")
 }
 }
 \details{
-Windows users that do not want to use Connect2Rtools each time a R session is opened, they can add the path to Rtools folder and the gcc compiler to their environment variables (in the Control Panel) writting them in the first place (e.g. C:\\\Rtools\\\bin;C:\\\Rtools\\\gcc-4.6.3\\\bin;rest-of-environment-variables)
+Windows users that do not want to use Connect2Rtools each time a R session is opened, they can add the path to Rtools folder and the gcc compiler to their environment variables (in the Control Panel) writting them in the first place (e.g. C:/Rtools/bin;C:/Rtools/gcc-4.6.3/bin;rest-of-environment-variables)
 }
 
 \examples{
