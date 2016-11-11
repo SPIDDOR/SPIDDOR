@@ -66,10 +66,10 @@ Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStat
     r<-do.call(data.table::CJ, replicate(length(BN$nodes.names), 0:1, FALSE))
   }
   
-  
-  if(length(BN$nodes.names)<=25){time_steps=999}
-  else if(length(BN$nodes.names)>25 & length(BN$nodes.names)<=50){time_steps=1999}
-  else{time_steps=2999}
+  time_steps=999
+#   if(length(BN$nodes.names)<=25){time_steps=999}
+#   else if(length(BN$nodes.names)>25 & length(BN$nodes.names)<=50){time_steps=1999}
+#   else{time_steps=2999}
   
   if(repetitions>60 & asynchronous==TRUE) repetitions=60
   
