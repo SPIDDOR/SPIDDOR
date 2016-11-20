@@ -9,11 +9,13 @@ write.dynamic_evolution_c=function(arguments,modulator){
                                     asynchronous=TRUE){\n\n')
   
   cat(file = t,"\tPolym=as.list(BN$Polymorphism)\n\n")
-  cat(file = t,'\tif(!all(BN$Initial_conditions %in% BN$nodes.names)) stop("Nodes in Initial conditions are not part of the network")\n\n')
+  cat(file = t,'\tif(!all(BN$Initial_conditions %in% BN$nodes.names)) stop("Nodes in Initial conditions are not part of the network")\n')
+  cat(file = t,'\tif(!all(Knockouts %in% BN$nodes.names) & Knockouts!="") stop("Nodes in Knockouts argument are not part of the network")\n')
+  cat(file = t,'\tif(!all(Over_expr %in% BN$nodes.names) & Over_expr!="") stop("Nodes in Over_expr argument are not part of the network")\n')
+  cat(file = t,'\tif(!all(Over_expr_AA %in% BN$nodes.names) & Over_expr_AA!="") stop("Nodes in Over_expr_AA argument are not part of the network")\n\n')
   cat(file = t, "\tif(any(BN$Initial_conditions %in% Knockouts)){\n")
   cat(file = t,"\t\tBN$Initial_conditions<-BN$Initial_conditions[-which(BN$Initial_conditions %in% Knockouts)]\n")
   cat(file = t,"\t}\n")
-  cat(file = t,"\tInitial_cond <- which(BN$nodes.names %in% BN$Initial_conditions)-1\n")
   cat(file = t,"\tif(!is.null(KO_times)){\n")
   cat(file = t,"\t\tif(!is.list(KO_times))KO_times=list(KO_times)\n")
   cat(file = t,"\t\tif(length(Knockouts)!=length(KO_times) & length(KO_times)==1){\n")
@@ -34,6 +36,9 @@ write.dynamic_evolution_c=function(arguments,modulator){
   cat(file = t,'\t\t}\n')
   cat(file = t,'\t\tOE_times=lapply(OE_times,function(i){i-1})\n')
   cat(file = t,'\t}\n\n')
+  cat(file=t,"\tBN$Initial_conditions<-c(BN$Initial_conditions,Over_expr)\n")
+  cat(file = t,"\tInitial_cond <- which(BN$nodes.names %in% BN$Initial_conditions)-1\n")
+  
   
   arg<-c()
   #if(length(arguments)==0 & length(modulator)==0) arg<-","
