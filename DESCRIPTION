@@ -22,7 +22,7 @@ Depends:
 Imports: Rcpp,
     snowfall,
     rlecuyer,
-    data.table,
     reshape,
+    data.table,
     gplots
 RoxygenNote: 5.0.1
