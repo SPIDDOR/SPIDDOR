@@ -17,12 +17,12 @@ Description: Modeling, simulation and analysis of Boolean networks applied to Sy
 License: GPL (>= 2)
 Encoding: latin1
 Depends:
-    reshape,
     snow,
     R (>= 3.1.0)
 Imports: Rcpp,
     snowfall,
     rlecuyer,
     data.table,
+    reshape,
     gplots
 RoxygenNote: 5.0.1
