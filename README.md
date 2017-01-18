@@ -7,7 +7,13 @@ install.packages("devtools")
 library(devtools)  
 install_github("SPIDDOR/SPIDDOR") 
 ```
-  
+If you use a proxy server you need to install httr package and then:
+```{r}
+library(httr)
+#Set your proxy here:
+set_config(use_proxy("10.10.10",8080))
+install_github("SPIDDOR/SPIDDOR") 
+```
 Additionally, Rtools is needed to use the simulation algorithm in C++.  
 ## To install Rtools:  
 ```{r}

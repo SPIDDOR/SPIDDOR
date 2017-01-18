@@ -1,9 +1,6 @@
 #' @importFrom reshape melt
 NULL
 
-#' @import ggplot2
-NULL
-
 #' @export
 toggplot<-function(x){
   
