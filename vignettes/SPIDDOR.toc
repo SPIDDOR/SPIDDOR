@@ -1,13 +1,13 @@
 \contentsline {section}{\numberline {1}Installation}{2}
 \contentsline {section}{\numberline {2}Introduction}{2}
-\contentsline {section}{\numberline {3}Assembling networks}{2}
-\contentsline {subsection}{\numberline {3.1}From text files}{2}
+\contentsline {section}{\numberline {3}Assembling networks}{3}
+\contentsline {subsection}{\numberline {3.1}From text files}{3}
 \contentsline {subsubsection}{\numberline {3.1.1}Boolean operators}{3}
 \contentsline {subsubsection}{\numberline {3.1.2}Boolean inputs}{4}
 \contentsline {subsubsection}{\numberline {3.1.3}Output of the assembled network}{4}
 \contentsline {subsection}{\numberline {3.2}From Cell Collective repository}{7}
-\contentsline {section}{\numberline {4}Simulation algorithm}{7}
-\contentsline {subsection}{\numberline {4.1}Perturbation of the system}{8}
+\contentsline {section}{\numberline {4}Simulation algorithm}{8}
+\contentsline {subsection}{\numberline {4.1}Perturbation of the system}{10}
 \contentsline {section}{\numberline {5}Attractors}{11}
 \contentsline {section}{\numberline {6}Perturbation analysis}{14}
 \contentsline {section}{\numberline {7}Model interoperability}{14}

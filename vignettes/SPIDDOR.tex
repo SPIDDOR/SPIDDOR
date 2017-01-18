@@ -29,7 +29,7 @@
 \clearpage
 
 \section{Installation}
-Before starting, make sure you have installed an R version >3.2.0. 
+Before starting, make sure you have installed an R version >3.1.0. 
 
 To install SPIDDOR:
 \begin{Schunk}
@@ -37,6 +37,15 @@ To install SPIDDOR:
 > install.packages("devtools")
 > library(devtools)
 > install_github("SPIDDOR/SPIDDOR")
+\end{Sinput}
+\end{Schunk}
+If you use a proxy server you need to install httr package and install SPIDDOR with the following code:
+\begin{Schunk}
+\begin{Sinput}
+> library(httr)
+> set_config(use_proxy("10.10.10",8080)) #Set your proxy here
+> library(devtools)
+> install_github("SPIDDOR/SPIDDOR") 
 \end{Sinput}
 \end{Schunk}
 
@@ -62,7 +71,7 @@ Be aware of the path where Rtools or RBuildTools is installed and use the \emph{
 Windows users that do not want to use \emph{Connect2Rtools} each time a R session is opened, they can add the path to Rtools folder and the gcc compiler to their environment variables (in the Control Panel) writting them in the first place (e.g. \path{C:\\Rtools\\bin;C:\\Rtools\\gcc-4.6.3\\bin;rest-of-environment-variables})
 
 \section{Introduction}
-\textbf{SPIDDOR }is an R package which consist on a set of tools to perform Boolean modeling in the context of development therapies for complex diseases. SPIDDOR allows users to simulate synchronous and asynchronous Boolean networks and analyze the results in terms of the average dynamic evolution of the nodes or in terms of attractors.
+\textbf{SPIDDOR }is an R package which consists on a set of tools to perform Boolean modeling in the context of development therapies for complex diseases. SPIDDOR allows users to simulate synchronous and asynchronous Boolean networks and analyze the results in terms of the average dynamic evolution of the nodes or in terms of attractors.
 
 From a methodological point of view the Boolean analysis performed by SPIDDOR involves certain novelties. Common Boolean modeling approaches only define direct activation-inhibition relationships between the components of the network. In our models, we incorporate the modulation interactions, which are used to modulate the intensity of the activations or inhibitions produced by the regulator nodes. The package also allows users to specify the activity level of their nodes as a percentage ON in order to perform mutational studies or evaluate the inputs of the network with background noises. Additionally, SPIDDOR incorporates new visualization techniques to evaluate the attractors of the system and the effects of perturbations.
 
