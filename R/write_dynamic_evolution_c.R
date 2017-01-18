@@ -10,9 +10,9 @@ write.dynamic_evolution_c=function(arguments,modulator){
   
   cat(file = t,"\tPolym=as.list(BN$Polymorphism)\n\n")
   cat(file = t,'\tif(!all(BN$Initial_conditions %in% BN$nodes.names)) stop("Nodes in Initial conditions are not part of the network")\n')
-  cat(file = t,'\tif(!all(Knockouts %in% BN$nodes.names) & Knockouts!="") stop("Nodes in Knockouts argument are not part of the network")\n')
-  cat(file = t,'\tif(!all(Over_expr %in% BN$nodes.names) & Over_expr!="") stop("Nodes in Over_expr argument are not part of the network")\n')
-  cat(file = t,'\tif(!all(Over_expr_AA %in% BN$nodes.names) & Over_expr_AA!="") stop("Nodes in Over_expr_AA argument are not part of the network")\n\n')
+  cat(file = t,'\tif(!all(Knockouts %in% BN$nodes.names) & all(Knockouts!="")) stop("Nodes in Knockouts argument are not part of the network")\n')
+  cat(file = t,'\tif(!all(Over_expr %in% BN$nodes.names) & all(Over_expr!="")) stop("Nodes in Over_expr argument are not part of the network")\n')
+  cat(file = t,'\tif(!all(Over_expr_AA %in% BN$nodes.names) & all(Over_expr_AA!="")) stop("Nodes in Over_expr_AA argument are not part of the network")\n\n')
   cat(file = t, "\tif(any(BN$Initial_conditions %in% Knockouts)){\n")
   cat(file = t,"\t\tBN$Initial_conditions<-BN$Initial_conditions[-which(BN$Initial_conditions %in% Knockouts)]\n")
   cat(file = t,"\t}\n")

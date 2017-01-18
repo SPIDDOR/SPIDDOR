@@ -8,9 +8,9 @@ write.dynamic_evolution=function(fun_header)
 {
   Polym=BN$Polymorphism
   if(!all(BN$Initial_conditions %in% BN$nodes.names)) stop("Nodes in Initial conditions are not part of the network")
-	if(!all(Knockouts %in% BN$nodes.names) & Knockouts!="") stop("Nodes in Knockouts argument are not part of the network")
-	if(!all(Over_expr %in% BN$nodes.names) & Over_expr!="") stop("Nodes in Over_expr argument are not part of the network")
-  if(!all(Over_expr_AA %in% BN$nodes.names) & Over_expr_AA!="") stop("Nodes in Over_expr_AA argument are not part of the network")
+	if(!all(Knockouts %in% BN$nodes.names) & all(Knockouts!="")) stop("Nodes in Knockouts argument are not part of the network")
+	if(!all(Over_expr %in% BN$nodes.names) & all(Over_expr!="")) stop("Nodes in Over_expr argument are not part of the network")
+  if(!all(Over_expr_AA %in% BN$nodes.names) & all(Over_expr_AA!="")) stop("Nodes in Over_expr_AA argument are not part of the network")
   
   M=pattern_creator.f(BN$nodes.names,time.steps,BN$Initial_conditions)
   pattern.m=M[[1]]
