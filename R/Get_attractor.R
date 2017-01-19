@@ -45,7 +45,7 @@ Get_Attractor.f=function(BN,
   
   pattern_final<-Reduce('cbind', P)
   colnames(pattern_final)<-seq(1,dim(pattern_final)[2])
-  DTT<-data.table::data.table(t(pattern_final))
+  DTT<-data.table::data.table(as.data.frame(t(pattern_final)))
   n<-rownames(pattern_final)[1:length(BN$nodes.names)]
   DT<-DTT[,sum(N),by=n]
   DT<-as.data.frame(DT)
