@@ -2,7 +2,7 @@
 #' @export
 Create_heatmap<-function(M,hclust.method="average",palette=NULL,sensitivity=0.2){
   #Matrix parametrization:
-  if(sensitivity>=1 |sensitivity<=0.5) stop("Sensitivity value must be smaller than 1 and greater than 0.5")
+  if(sensitivity>=0.5) stop("Sensitivity value must be smaller than 0.5")
   mat_par.m<-Matrix_parametrization.f(M,sensitivity)
   #Draw heatmap:
   if(length(palette)==0){
