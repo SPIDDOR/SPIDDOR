@@ -91,6 +91,36 @@ OE_matrix.f = function(BN,time.steps=999,Knockouts="",Over_expr="",
   for (i in 1:number.nodes)
   {
     print(i/number.nodes)
+    Over_expr=c(nodes.names[i])
+    set.seed(seed_i)
+    Freq_i=Prob_nodes.f(BN,time.steps,Knockouts,Over_expr,Over_expr_AA,
+                        KO_times,OE_times,asynchronous,repetitions)
+    nodes.m[,i] = Freq_i/Freq_1
+  }
+  
+  return(nodes.m)  
+  
+}
+
+#' @export
+OE_AA_matrix.f = function(BN,time.steps=999,Knockouts="",Over_expr="",
+                       Over_expr_AA="",KO_times=NULL,OE_times=NULL, 
+                       asynchronous=TRUE, repetitions)
+{ 
+  nodes.names<-BN$nodes.names
+  number.nodes=length(nodes.names)
+  nodes.m = matrix(0,ncol=number.nodes,nrow=number.nodes)
+  row.names(nodes.m) = nodes.names
+  colnames(nodes.m) = nodes.names
+  
+  seed_i=runif(1,min=0,max=2147483647) #Max value allowed. Greater than this value is considered a float number.
+  set.seed(seed_i)
+  
+  Freq_1=Prob_nodes.f(BN,time.steps,Knockouts,Over_expr,Over_expr_AA,
+                      KO_times,OE_times,asynchronous,repetitions)
+  for (i in 1:number.nodes)
+  {
+    print(i/number.nodes)
     Over_expr_AA=c(nodes.names[i])
     set.seed(seed_i)
     Freq_i=Prob_nodes.f(BN,time.steps,Knockouts,Over_expr,Over_expr_AA,
@@ -101,12 +131,13 @@ OE_matrix.f = function(BN,time.steps=999,Knockouts="",Over_expr="",
   return(nodes.m)  
   
 }
+
 #' @export
-Matrix_parametrization.f=function(mat){  
+Matrix_parametrization.f=function(mat,sensitivity=0.2){  
   mat[mat <= 0.5] <- (-2)
-  mat[mat > 0.5 & mat <= 0.8] <- (-1)
-  mat[mat <= 1.25 & mat > 0.8] <- 0
-  mat[mat > 1.25 & mat <= 2] <- (1)
+  mat[mat > 0.5 & mat <= (1-sensitivity)] <- (-1)
+  mat[mat <= (1/(1-sensitivity)) & mat > (1-sensitivity)] <- 0
+  mat[mat > (1/(1-sensitivity)) & mat <= 2] <- (1)
   mat[mat > 2] <- (2)
   mat[!is.finite(mat)] <- 0 
   col_sub=apply(mat, 2, function(col) all(col==0))

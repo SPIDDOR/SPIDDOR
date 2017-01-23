@@ -8,7 +8,7 @@ Create a heatmap
 Plot a heatmap of the perturbation analysis results.
 }
 \usage{
-Create_heatmap(M, hclust.method = "average", palette = NULL)
+Create_heatmap(M, hclust.method = "average", palette = NULL,sensitivity=0.2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -21,6 +21,9 @@ Hierarchical clustering method.
   \item{palette}{
 Color palette to use in the heatmap. By default, the perturbations that
 lead to a higher activation of the nodes compared to an unperturbed situation are represented in orange while a lower activation of the nodes is indicated in blue.
+}
+ \item{sensitivity}{
+Percentage of change of the attractors (perturbed situation vs baseline attractor) from which the cells of the heatmap start to be colored. By default, the function colors the heatmaps when changes in the attractor states are greater than 20\% (sensitivity=0.2).
 }
 }
 

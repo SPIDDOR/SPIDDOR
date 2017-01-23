@@ -604,7 +604,7 @@ print(All_attr_syn)
 By only checking 1000 initial states we do not get the third fixed-point of the network.
 \section{Perturbation analysis}
 \texttt{KO\_matrix.f} function evaluates the effect of single node knockouts on the network by computing the Perturbation index ($Prob_{Perturbed} / Prob_{Normal}$) of the nodes. The result of this function is a square matrix indicating how the knockout of the ``column node'' affects each ``row node''.\\
-\texttt{OE\_matrix.f} function is equal to the previous function but it evaluates the effects of ``overexpressions after activation'' on the nodes of the network.
+\texttt{OE\_matrix.f} function is equal to the previous function but it evaluates the effects of overexpressions on the nodes of the network.
 
 \texttt{Create\_heatmap} function is used to visualize the individual values contained in the matrix returned by these two functions as colors with a heatmap of the column nodes. The perturbations that lead to a higher activation of the nodes compared to an unperturbed situation are represented in orange while a lower activation of the nodes is indicated in blue. This color palette can be changed by the user.
 
