@@ -56,7 +56,7 @@ Get_Attractor.f=function(BN,
 }
 
 get.attractor.asyn<-function(M){
-  DTT<-data.table::data.table(as.data.frame(t(M[[1]])))
+  DTT<-data.table::data.table(as.data.frame(t(M)))
   DT<-DTT[,.N,by=names(DTT)]
   t<-which(diff(which(DT$N<3))!=1)[1] 
   if(is.na(t)==F){
