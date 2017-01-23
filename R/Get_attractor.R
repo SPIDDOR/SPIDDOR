@@ -56,7 +56,7 @@ Get_Attractor.f=function(BN,
 }
 
 get.attractor.asyn<-function(M){
-  DTT<-data.table::data.table(as.data.frame(t(M)))
+  DTT<-data.table::data.table(as.data.frame(t(M[[1]])))
   DT<-DTT[,.N,by=names(DTT)]
   t<-which(diff(which(DT$N<3))!=1)[1] 
   if(is.na(t)==F){
@@ -67,6 +67,7 @@ get.attractor.asyn<-function(M){
   }
   #DT$N<-NULL
   M2<-as.data.frame(t(DT))
+  if(is.null(colnames(M2))==TRUE) stop("Choose a higher value for time.steps argument")
   colnames(M2)<-seq(1,dim(M2)[2]) 
   return(M2)
 }
