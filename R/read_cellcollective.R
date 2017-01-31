@@ -1,6 +1,6 @@
 
 #' @export
-read_cellcollective<-function(file,txt.output=NULL,language="C"){
+read.cellcollective<-function(file,txt.output=NULL,language="C"){
   cctxt<-read.table(file,sep=".")
   txtSPIDDOR<-sapply(cctxt,function(x){
     y<-gsub(" AND "," & ",x)
@@ -17,5 +17,5 @@ read_cellcollective<-function(file,txt.output=NULL,language="C"){
 
 #Example:
 # file<-"Example_networks/CD4_T_cell_signaling_cellCollective.txt"
-# BN<-read_cellcollective(file)
-# BN<-read_cellcollective(file,txt.output = "expression_spiddor.txt")
+# BN<-read.cellcollective(file)
+# BN<-read.cellcollective(file,txt.output = "expression_spiddor.txt")

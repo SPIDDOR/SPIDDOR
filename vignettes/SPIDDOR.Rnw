@@ -289,7 +289,7 @@ BN$Modulator["mod2"]<-4
 Then, all the modulation interactions that have the \texttt{mod2} argument will use the value of 4.
 
 \subsection{From Cell Collective repository}
-Networks can be loaded from a previously downloaded file from The Cell Collective repository (\url{www.thecellcollective.org/}) using \texttt{read\_cellcollective}.\\
+Networks can be loaded from a previously downloaded file from The Cell Collective repository (\url{www.thecellcollective.org/}) using \texttt{read.cellcollective}.\\
 Here is the example of the Lac operon network written with The Cell Collective semantics \cite{Helikar2015-um}.\\
 \\ CellCollective\_file.txt file:
 \begin{framed}
@@ -305,7 +305,7 @@ lac_mRNA = ( lac_operon )
 \end{BVerbatim}
 \end{framed}
 <<eval=FALSE>>=
-BN<-read_cellcollective(file="CellCollective_file.txt")
+BN<-read.cellcollective(file="CellCollective_file.txt")
 @
 
 \begin{verbatim}
