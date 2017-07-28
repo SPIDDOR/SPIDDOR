@@ -14,16 +14,10 @@ library(httr)
 set_config(use_proxy("10.10.10",8080))
 install_github("SPIDDOR/SPIDDOR") 
 ```
-Additionally, Rtools is needed to use the simulation algorithm in C++.  
+Additionally, Rtools is needed to use the simulation algorithm in C++. 
 ## To install Rtools:  
-```{r}
-install.packages("installr")  
-library(installr)  
-install.Rtools() 
-```
-  
-If you have the most recent version of R, you should select the most recent Rtools download (at the top).  
-Be aware of the path where Rtools or RBuildTools is installed and use the Connect2Rtools function each time you start a new R session in order to connect the package with Rtools gcc compiler (only for Windows users). Example:  
+You can download it from https://cran.r-project.org/bin/windows/Rtools/ .   
+Select the Rtools download compatible with your R version. We recommend that users use the latest release of Rtools with the latest release of R. Be aware of the path where Rtools or RBuildTools is installed and use the Connect2Rtools function each time you start a new R session in order to connect the package with Rtools gcc compiler (only for Windows users). Example:  
 ```{r}
 library(SPIDDOR)  
 Connect2Rtools(path="C:\\Rtools")
