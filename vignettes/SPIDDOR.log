@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.1)  31 JAN 2017 10:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.1)  28 JUL 2017 14:32
 entering extended mode
 **SPIDDOR.tex
 ("D:\R project\SPIDDOR\vignettes\SPIDDOR.tex"
@@ -608,9 +608,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ("D:\R project\SPIDDOR\vignettes\SPIDDOR.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <5> on input line 2.
 )
 \tf@toc=\write4
  [1
@@ -621,226 +621,286 @@ LaTeX Font Info:    Try loading font information for T1+aett on input line 36.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 52--56
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
+
+ []
+
+
+Overfull \hbox (13.40544pt too wide) in paragraph at lines 74--76
+[]\T1/aer/m/n/10 1- Reg-is-ter as an Ap-ple De-vel-oper here (free): $\T1/aett/
+m/n/10 https : / / developer . apple . com / programs / register/$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--83
 
  []
 
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 94.
+Underfull \hbox (badness 10000) in paragraph at lines 87--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--96
+
+ []
+
+[3]
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 138.
+
  (C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\ts1aer.fd
 File: ts1aer.fd 
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 94.
- [3]
-Overfull \hbox (3.38933pt too wide) in paragraph at lines 161--162
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 138.
+ [4]
+Overfull \hbox (3.38933pt too wide) in paragraph at lines 205--206
 \T1/aer/m/n/10 Once all the \T1/aer/m/it/10 BFs \T1/aer/m/n/10 are spec-i-fied 
 in the text file, they can be loaded in R via \T1/aett/m/n/10 read.Boolean.func
 tions\T1/aer/m/n/10 .
  []
 
-[4]
-Overfull \hbox (20.81293pt too wide) in paragraph at lines 202--202
+[5]
+Overfull \hbox (20.81293pt too wide) in paragraph at lines 246--246
 [] \T1/aett/m/n/10 [1] "APC_Ag" "B71"    "CD40"   "B7H2"   "ICOS"   "CD28"   "C
 TLA4"  "CD40L"  "T0_ACT"[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 202--202
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 246--246
 []\T1/aett/m/n/10 APC_Ag    B71   CD40   B7H2   ICOS   CD28  CTLA4  CD40L T0_AC
 T    IL6   IL12    IL2[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 202--202
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 246--246
 []     \T1/aett/m/n/10 1      1      1      1      1      1      1      1      
 1      1      1      1[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--208
+Underfull \hbox (badness 10000) in paragraph at lines 248--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--227
+Underfull \hbox (badness 10000) in paragraph at lines 253--271
 \T1/aett/m/n/10 T0_ACT = ((CD28 & B71) | (T0_ACT & B7H2) &! (MOD_T0_ACT[][3][] 
 & MOD_B7H2[][3][]))
  []
 
 
-Overfull \hbox (20.81293pt too wide) in paragraph at lines 255--255
+Underfull \vbox (badness 1354) detected at line 272
+ []
+
+[6]
+Overfull \hbox (20.81293pt too wide) in paragraph at lines 299--299
 [] \T1/aett/m/n/10 [1] "APC_Ag" "B71"    "CD40"   "B7H2"   "ICOS"   "CD28"   "C
 TLA4"  "CD40L"  "T0_ACT"[] 
  []
 
-[5]
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 255--255
+
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 299--299
 []\T1/aett/m/n/10 APC_Ag    B71   CD40   B7H2   ICOS   CD28  CTLA4  CD40L T0_AC
 T    IL6   IL12    IL2[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 255--255
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 299--299
 []     \T1/aett/m/n/10 1      1      1      1      1      1      1      1      
 1      1      1      1[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--259
+Underfull \hbox (badness 10000) in paragraph at lines 301--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--278
+Underfull \hbox (badness 10000) in paragraph at lines 304--322
 \T1/aett/m/n/10 T0_ACT = ((CD28 & B71) | (T0_ACT & B7H2) &! (MOD_T0_ACT[][mod1]
 [] &
  []
 
-
-Overfull \hbox (20.81293pt too wide) in paragraph at lines 304--304
+[7]
+Overfull \hbox (20.81293pt too wide) in paragraph at lines 348--348
 [] \T1/aett/m/n/10 [1] "APC_Ag" "B71"    "CD40"   "B7H2"   "ICOS"   "CD28"   "C
 TLA4"  "CD40L"  "T0_ACT"[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 304--304
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 348--348
 []\T1/aett/m/n/10 APC_Ag    B71   CD40   B7H2   ICOS   CD28  CTLA4  CD40L T0_AC
 T    IL6   IL12    IL2[] 
  []
 
-[6]
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 304--304
+
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 348--348
 []     \T1/aett/m/n/10 1      1      1      1      1      1      1      1      
 1      1      1      1[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--318
+Underfull \hbox (badness 10000) in paragraph at lines 359--362
 
  []
 
-
-Overfull \hbox (41.77289pt too wide) in paragraph at lines 360--360
+[8]
+Overfull \hbox (41.77289pt too wide) in paragraph at lines 404--404
 []      \T1/aett/m/n/10 allolactose       lac_enzymes        lac_operon     lac
 _repressor               CAP[] 
  []
 
 
-Overfull \hbox (41.77289pt too wide) in paragraph at lines 360--360
+Overfull \hbox (41.77289pt too wide) in paragraph at lines 404--404
 []                \T1/aett/m/n/10 1                 1                 1        
          1                 1[] 
  []
 
 
-Overfull \hbox (41.77289pt too wide) in paragraph at lines 360--360
+Overfull \hbox (41.77289pt too wide) in paragraph at lines 404--404
 []\T1/aett/m/n/10 lactose_breakdown              cAMP          lac_mRNA    envi
 ro_lactose      CAP_mutation[] 
  []
 
 
-Overfull \hbox (41.77289pt too wide) in paragraph at lines 360--360
+Overfull \hbox (41.77289pt too wide) in paragraph at lines 404--404
 []                \T1/aett/m/n/10 1                 1                 1        
          1                 1[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--367
+Underfull \hbox (badness 10000) in paragraph at lines 407--411
 
  []
 
-[7] <Average.jpg, id=36, 426.6339pt x 426.6339pt>
+[9] <Average.jpg, id=42, 426.6339pt x 426.6339pt>
 File: Average.jpg Graphic file (type jpg)
  <use Average.jpg>
-Package pdftex.def Info: Average.jpg used on input line 423.
+Package pdftex.def Info: Average.jpg used on input line 467.
 (pdftex.def)             Requested size: 339.67029pt x 339.67358pt.
- [8]
-[9 <D:/R project/SPIDDOR/vignettes/Average.jpg>] [10]
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 507--507
+ [10]
+[11 <D:/R project/SPIDDOR/vignettes/Average.jpg>]
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 551--551
 []\T1/aett/m/n/10 APC_Ag    B71   CD40   B7H2   ICOS   CD28  CTLA4  CD40L T0_AC
 T    IL6   IL12    IL2[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 507--507
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 551--551
 []   \T1/aett/m/n/10 1.0    0.5    1.0    1.0    1.0    1.0    1.0    1.0    1.
 0    1.0    1.0    1.0[] 
  []
 
-
-Overfull \hbox (20.81293pt too wide) in paragraph at lines 562--562
+[12]
+Overfull \hbox (20.81293pt too wide) in paragraph at lines 606--606
 [] \T1/aett/m/n/10 [1] "CycD"   "Rb"     "E2F"    "CycE"   "CycA"   "p27"    "C
 dc20"  "Cdh1"   "UbcH10"[] 
  []
 
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 610--614
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 654--658
 
  []
 
-
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 647--647
+[14]
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 691--691
 []  \T1/aett/m/n/10 Isl1 canWnt exogen_BMP2_II Bmp2 exogen_canWnt_II Tbx1 Nkx2_
 5 Dkk1 Mesp1 Fgf8 Tbx5[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 647--647
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 691--691
 []\T1/aett/m/n/10 1    0      0              1    1                0    0      
 0    0     0    0    0[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 647--647
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 691--691
 []\T1/aett/m/n/10 2    0      0              1    1                0    0      
 1    0     0    0    1[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 647--647
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 691--691
 []\T1/aett/m/n/10 3    1      1              1    0                1    1      
 1    0     0    1    0[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 665--665
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 709--709
 []  \T1/aett/m/n/10 Isl1 canWnt exogen_BMP2_II Bmp2 exogen_canWnt_II Tbx1 Nkx2_
 5 Dkk1 Mesp1 Fgf8 Tbx5[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 665--665
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 709--709
 []\T1/aett/m/n/10 1    0      0              1    1                0    0      
 0    0     0    0    0[] 
  []
 
 
-Overfull \hbox (10.33295pt too wide) in paragraph at lines 665--665
+Overfull \hbox (10.33295pt too wide) in paragraph at lines 709--709
 []\T1/aett/m/n/10 2    0      0              1    1                0    0      
 1    0     0    0    1[] 
  []
 
-[13] <heatmap.jpg, id=57, 341.3553pt x 341.3553pt>
+<heatmap.jpg, id=60, 341.3553pt x 341.3553pt>
 File: heatmap.jpg Graphic file (type jpg)
  <use heatmap.jpg>
-Package pdftex.def Info: heatmap.jpg used on input line 684.
+Package pdftex.def Info: heatmap.jpg used on input line 728.
 (pdftex.def)             Requested size: 339.67029pt x 339.67725pt.
- [14]
-[15 <D:/R project/SPIDDOR/vignettes/heatmap.jpg>]
-("D:\R project\SPIDDOR\vignettes\SPIDDOR.bbl") [16
+ [15] [16 <D:/R project/SPIDDOR/vignettes/heatmap.jpg>] [17]
+("D:\R project\SPIDDOR\vignettes\SPIDDOR.bbl") [18
 
 ]
 ("D:\R project\SPIDDOR\vignettes\SPIDDOR.aux") ) 
 Here is how much of TeX's memory you used:
  12199 strings out of 493921
- 223132 string characters out of 3144853
- 267848 words of memory out of 3000000
+ 223141 string characters out of 3144853
+ 266848 words of memory out of 3000000
  15332 multiletter control sequences out of 15000+200000
  29538 words of font info for 64 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 45i,6n,42p,10417b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,6n,42p,10417b,290s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\farmacometria\AppDat
 a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fil
@@ -855,9 +915,9 @@ fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on SPIDDOR.pdf (16 pages, 606660 bytes).
+Output written on SPIDDOR.pdf (18 pages, 611724 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  15 words of extra memory for PDF output out of 10000 (max. 10000000)
 
