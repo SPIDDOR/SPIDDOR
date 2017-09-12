@@ -108,6 +108,37 @@ Get_Attractor_parallel.f=function(cpus,
   return (DT)
 }
 
+get.attractor_syn<-function(M){
+  x<-as.numeric(colnames(M[,duplicated(t(M))]))
+  if(all(!diff(x)!=1)==TRUE){
+    se=x
+  }else{
+    t<-tail(which(diff(x)!=1),n=1)
+    se<-x[t+1:(length(x)-t)]
+  }
+  col_atr<-colnames(t(unique(t(M[,colnames(M)%in%se]))))
+  col_atrs<-seq(as.numeric(col_atr[1]),(as.numeric(col_atr[length(col_atr)])))
+  attr<-M[,colnames(M)%in%col_atrs]
+  return(attr)
+}
+
+get.attractor.asyn<-function(M){
+  DTT<-data.table::data.table(as.data.frame(t(M)))
+  DT<-DTT[,.N,by=names(DTT)]
+  t<-which(diff(which(DT$N<3))!=1)[1] 
+  if(is.na(t)==F){
+    DT<-DT[(t+1):dim(DT)[1],]
+    #sapply( 1:t,function(i) identical(DTT[i,],DT[i,]))
+  }else{
+    DT<-DT[DT$N!=1,]
+  }
+  #DT$N<-NULL
+  M2<-as.data.frame(t(DT))
+  if(is.null(colnames(M2))==TRUE) stop("Choose a higher value for time.steps argument")
+  colnames(M2)<-seq(1,dim(M2)[2]) 
+  return(M2)
+}
+
 #############################################################################################################
 
 #EXAMPLES
