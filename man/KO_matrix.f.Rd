@@ -58,7 +58,7 @@ See Also \code{\link{Create_heatmap}}
  #Read the Boolean functions:
  BN <- read.Boolean.functions(Lines=BN$BooleanFunctions)
  #Perturbation analysis: knockouts
- KO.m<-KO_matrix.f(BN,time_steps=999,repetitions=24,asynchronous=TRUE)
+ KO.m<-KO_matrix.f(BN,time.steps=999,repetitions=24,asynchronous=TRUE)
  #Create a heatmap of the results:
  Create_heatmap(KO.m)
  }

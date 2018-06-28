@@ -50,8 +50,13 @@ Get_Attractor.f=function(BN,
   DT<-DTT[,sum(N),by=n]
   DT<-as.data.frame(DT)
   colnames(DT)<-c(BN$nodes.names,"Count")
-  if(Percent.ON==T) return(apply(DT[,1:length(BN$nodes.names)],2,function(i) sum(i*DT$Count))/sum(DT$Count))
-  
+  if (Percent.ON == T){
+    if(nrow(DT)%in%c(2,3)){
+      DT$Count=1
+    }
+    PO<-apply(DT[, 1:length(BN$nodes.names)], 2, function(i) sum(i *DT$Count))/sum(DT$Count)
+    return(PO)
+  } 
   return(DT)
 }
 

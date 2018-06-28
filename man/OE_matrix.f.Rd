@@ -60,7 +60,7 @@ See Also \code{\link{Create_heatmap}} \code{\link{KO_matrix.f}}
  #Read the Boolean functions:
  BN <- read.Boolean.functions(Lines=BN$BooleanFunctions)
  #Perturbation analysis: knockouts
- OE.m<-OE_matrix.f(BN,time_steps=999,repetitions=24,asynchronous=TRUE)
+ OE.m<-OE_matrix.f(BN,time.steps=999,repetitions=24,asynchronous=TRUE)
  #Create a heatmap of the results:
  Create_heatmap(OE.m)
  }
