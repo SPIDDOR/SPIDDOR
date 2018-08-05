@@ -32,6 +32,7 @@ See Also \code{\link{Average_simulations.f}} \code{\link{Get_Attractor.f}} \code
  #Plot the results with ggplot2:
    AVG2<-toggplot(AVG_cellcycle)
    
+   library(ggplot2)
    ggplot(data=AVG2,aes(x=time,y=value)) +
    geom_line( colour="#336600",size = 1.5) + ylab(" \% of activation") + 
    xlab("Iterations") + facet_wrap(~variable)

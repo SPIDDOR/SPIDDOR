@@ -1,5 +1,7 @@
 
 Get_all_attractor_wrapper.f=function(cpus,BN,time.steps,asynchronous,repetitions,r,combinations,Percent.ON){
+  Recurrence<-NULL
+  
   Attr<-list()
   Attr_states<-list()
   o=1
@@ -39,6 +41,8 @@ Get_all_attractor_wrapper.f=function(cpus,BN,time.steps,asynchronous,repetitions
 #' @export
 Get_all_attractors.f=function(cpus,BN,asynchronous=FALSE,repetitions=0,startStates=NULL,Percent.ON=TRUE){
   
+  Recurrence<-NULL
+  V1<-NULL
   snowfall::sfInit( parallel=TRUE, cpus=cpus)
   capture.output(snowfall::sfSource("dynamic_evolution.R"),file='NUL')
   

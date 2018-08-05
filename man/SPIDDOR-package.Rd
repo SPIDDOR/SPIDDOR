@@ -57,6 +57,7 @@ Simulation}
   #Plot the results with ggplot2:
    AVG2<-toggplot(AVG)
    
+   library(ggplot2)
    ggplot(data=AVG2,aes(x=time,y=value)) +
    geom_line( colour="#336600",size = 1.5) + ylab(" \% of activation") + 
    xlab("Time steps") +   facet_wrap(~variable)

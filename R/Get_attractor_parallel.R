@@ -33,7 +33,7 @@ Get_attractor_wrapper.f=function(cpus, #number of cores
                                  repetitions,
                                  Percent.ON=TRUE)
 {
- 
+  N<-NULL
   M<-dynamic_evolution.f(BN, time.steps,Knockouts,Over_expr,
                          Over_expr_AA,KO_times,OE_times,asynchronous=FALSE)
   nodes.names<-BN$nodes.names
@@ -76,6 +76,7 @@ Get_Attractor_parallel.f=function(cpus,
                                   repetitions,
                                   Percent.ON=TRUE)
 {
+  N<-NULL
   snowfall::sfInit( parallel=TRUE, cpus=cpus)
   capture.output(snowfall::sfLibrary(data.table),file='NUL')
   capture.output(snowfall::sfSource("dynamic_evolution.R"),file='NUL') #Finalmente poner dynamic_evolution.R

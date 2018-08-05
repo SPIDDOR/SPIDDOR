@@ -6,6 +6,11 @@
 
 #' @import data.table
 NULL
+#' @import stats
+NULL
+#' @import utils
+NULL
+
 
 #' @export
 Get_Attractor.f=function(BN,
@@ -19,7 +24,7 @@ Get_Attractor.f=function(BN,
                         repetitions,
                         Percent.ON=TRUE)
 {
-
+  N<-NULL
   M<-dynamic_evolution.f(BN, time.steps,Knockouts,Over_expr,
                          Over_expr_AA,KO_times,OE_times,asynchronous=FALSE)
   nodes.names<-BN$nodes.names
