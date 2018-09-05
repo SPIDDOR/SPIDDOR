@@ -52,7 +52,7 @@ It can be downloaded from: \url{https://cran.r-project.org/bin/windows/Rtools}\\
 Be aware of the path where Rtools or RBuildTools is installed and then use the \emph{Connect2Rtools} function each time you start a new R session in order to connect the package with Rtools gcc compiler. Example:
 <<eval=FALSE>>=
 library(SPIDDOR)
-Connect2Rtools(path="C:\\Rtools")
+Connect2Rtools(path="C:/Rtools")
 @
 
 Windows users that do not want to use \emph{Connect2Rtools} each time a R session is opened, they can add the path to Rtools folder and the gcc compiler to their environment variables (in the Control Panel) writting them in the first place (e.g. \path{C:\\Rtools\\bin;C:\\Rtools\\gcc-4.6.3\\bin;rest-of-environment-variables})

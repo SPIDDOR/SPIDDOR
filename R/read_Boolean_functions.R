@@ -9,3 +9,4 @@ read.Boolean.functions<-function(file=NULL,Lines=NULL,language="C"){
   
   return(BN)
 }
+

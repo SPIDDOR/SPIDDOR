@@ -23,7 +23,9 @@ Imports: Rcpp,
     snowfall,
     rlecuyer,
     data.table,
-    gplots
+    gplots,
+    stats,
+    utils
 RoxygenNote: 5.0.1
 Suggests:
     ggplot2
