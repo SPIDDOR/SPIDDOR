@@ -25,6 +25,9 @@ lead to a higher activation of the nodes compared to an unperturbed situation ar
  \item{sensitivity}{
 Percentage of change of the attractors (perturbed situation vs baseline attractor) from which the cells of the heatmap start to be colored. By default, the function colors the heatmaps when changes in the attractor states are greater than 20\% (sensitivity=0.2).
 }
+ \item{...}{
+Extra arguments to pass to heatmap.2 function from gplots package
+}
 }
 
 \value{
