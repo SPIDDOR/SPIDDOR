@@ -44,9 +44,11 @@ See Also \code{\link{KO_matrix.f}} \code{\link{OE_matrix.f}}
  #Read the Boolean functions:
  BN <- read.Boolean.functions(Lines=BN$BooleanFunctions)
  #Perturbation analysis: knockouts
- KO.m<-KO_matrix.f(BN,time_steps=999,repetitions=24,asynchronous=TRUE)
+ KO.m<-KO_matrix.f(BN,time.steps=999,repetitions=24,asynchronous=TRUE)
  #Create a heatmap of the results:
  Create_heatmap(KO.m)
+ #In order to see the numeric values of each cell:
+ Create_heatmap(KO.m,cellnote=round(KO.m,digits=2),notecol="white")
  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
