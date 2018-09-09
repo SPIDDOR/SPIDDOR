@@ -8,6 +8,15 @@
 #   source("Average_simulations.R")
 #   AVG<-Average_simulations.f(BN,time.steps=60,repetitions=100)
 ##############################################################################################
+# dynamic_evolution.f<-function(BN, time.steps,Knockouts="",  
+#                               Over_expr="", 
+#                               Over_expr_AA="",
+#                               KO_times=NULL,
+#                               OE_times=NULL,
+#                               asynchronous=TRUE){
+#   stop('Use read.Boolean.functions first to load your Boolean network')
+# }
+
 #' @export
 Average_simulations.f=function(BN,time.steps,
                                Knockouts="",  

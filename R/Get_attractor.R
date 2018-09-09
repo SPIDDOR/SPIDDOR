@@ -65,7 +65,7 @@ Get_Attractor.f=function(BN,
   return(DT)
 }
 
-
+#' @export
 get.attractor.asyn<-function(M){
   DTT<-data.table::data.table(as.data.frame(t(M)))
   DT<-DTT[,.N,by=names(DTT)]
@@ -83,7 +83,7 @@ get.attractor.asyn<-function(M){
   return(M2)
 }
 
-
+#' @export
 get.attractor_syn<-function(M){
   x<-as.numeric(colnames(M[,duplicated(t(M))]))
   if(all(!diff(x)!=1)==TRUE){
