@@ -8,7 +8,7 @@ Create a heatmap
 Plot a heatmap of the perturbation analysis results.
 }
 \usage{
-Create_heatmap(M, hclust.method = "average", palette = NULL,sensitivity=0.2)
+Create_heatmap(M, hclust.method = "average", palette = NULL,sensitivity=0.2,...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

@@ -10,7 +10,7 @@
 \usepackage{a4wide}
 \usepackage{fancyvrb}
 
-
+% \VignetteIndexEntry{SPIDDOR}
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{0.2em}
@@ -18,7 +18,7 @@
 \clubpenalty=10000
 
 \title{SPIDDOR package vignette}
-\author{Itziar Irurzun-Arana, I\~naki Tr\'oconiz Jos\'e David G\'omez-Mantilla}
+\author{Itziar Irurzun-Arana, I\~naki Tr\'oconiz and Jos\'e David G\'omez-Mantilla}
 
 \begin{document}
 \SweaveOpts{concordance=TRUE}

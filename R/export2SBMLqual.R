@@ -1,6 +1,6 @@
 #' @export
 export2SBMLqual<-function(inputfile=NULL,Lines=NULL,file="output.sbml"){
-  
+  SBMLcode<-NULL
   if(length(Lines)==0) Lines <- readLines(inputfile, -1)
   Lines <- gsub("#.*", "", Lines)
   Lines <- Lines[nchar(Lines) > 0]

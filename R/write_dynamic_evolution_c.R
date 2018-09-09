@@ -1,5 +1,5 @@
 write.dynamic_evolution_c=function(arguments,modulator){
-  
+  dynamicevolution<-NULL
   file<-"dynamic_evolution.R"
   t <- textConnection("dynamicevolution", encoding = "UTF-8", open = "w", local = TRUE)
   

@@ -1,6 +1,6 @@
 
 #' @export
-Connect2Rtools<-function(path="C:\\Rtools")
+Connect2Rtools<-function(path="C:/Rtools")
 {
   rtools <- paste(path,"\\bin",sep="")
   gcc <- paste(path,"\\gcc-4.6.3\\bin",sep="")
