@@ -17,6 +17,7 @@
 #   stop('Use read.Boolean.functions first to load your Boolean network')
 # }
 
+
 #' @export
 Average_simulations.f=function(BN,time.steps,
                                Knockouts="",  
@@ -27,7 +28,7 @@ Average_simulations.f=function(BN,time.steps,
                                asynchronous=TRUE,
                                repetitions)
 {
-
+  
   pattern_i<-replicate(repetitions,dynamic_evolution.f(BN, time.steps,Knockouts,Over_expr,
                                                     Over_expr_AA,KO_times,OE_times,asynchronous), simplify=FALSE)
   pattern_final<-Reduce('+', pattern_i)

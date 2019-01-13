@@ -27,5 +27,6 @@ Imports: Rcpp,
     stats,
     utils
 RoxygenNote: 5.0.1
+LazyData: true
 Suggests:
     ggplot2
