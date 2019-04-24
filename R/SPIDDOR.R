@@ -1,0 +1,1 @@
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("k","dynamic_evolution.f"))
